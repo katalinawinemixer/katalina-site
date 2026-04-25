@@ -1,26 +1,301 @@
 @import "tailwindcss";
 
+@theme {
+  --color-paper: #f4efe3;
+  --color-paper-soft: #ece6d6;
+  --color-paper-warm: #ebe2cb;
+  --color-ink: #1b1813;
+  --color-ink-soft: #574b3d;
+  --color-ink-mute: #897864;
+  --color-terracotta: #a8442a;
+  --color-terracotta-soft: #c56644;
+  --color-clinical: #1f3a5f;
+  --color-rule: #d9cfb8;
+  --color-rule-soft: #e6decb;
+  --color-ochre: #c99a2b;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-newsreader);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt";
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  font-variation-settings: "opsz" 14;
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: var(--color-paper);
+}
+
+/* ──────────────────────────────────────────────
+   Wordmark — the signature moment
+   ────────────────────────────────────────────── */
+
+.wordmark {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: "SOFT" 50, "WONK" 0, "opsz" 144;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  color: var(--color-ink);
+  display: block;
+}
+
+.wordmark-hero {
+  font-size: clamp(3rem, 13vw, 9.5rem);
+}
+
+.wordmark .enye {
+  position: relative;
+  display: inline-block;
+}
+
+.wordmark .enye::after {
+  content: "˜";
+  position: absolute;
+  top: -0.06em;
+  left: 50%;
+  transform: translate(-52%, 0) scaleX(1.25);
+  color: var(--color-terracotta);
+  font-family: var(--font-display), serif;
+  font-variation-settings: "WONK" 1, "SOFT" 100, "opsz" 144;
+  font-size: 0.58em;
+  font-weight: 600;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* ──────────────────────────────────────────────
+   Editorial rules
+   ────────────────────────────────────────────── */
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  margin: 0;
+}
+
+.rule-soft {
+  border: 0;
+  border-top: 1px solid var(--color-rule-soft);
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────
+   Numerals
+   ────────────────────────────────────────────── */
+
+.oldstyle {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ──────────────────────────────────────────────
+   Drop cap (essays)
+   ────────────────────────────────────────────── */
+
+.dropcap > p:first-of-type::first-letter {
+  font-family: var(--font-display), Georgia, serif;
+  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+  color: var(--color-terracotta);
+  float: left;
+  font-size: 5em;
+  line-height: 0.85;
+  padding-right: 0.08em;
+  padding-top: 0.06em;
+  font-weight: 500;
+}
+
+/* ──────────────────────────────────────────────
+   Pull quote
+   ────────────────────────────────────────────── */
+
+.pullquote {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-variation-settings: "SOFT" 80, "WONK" 0, "opsz" 144;
+  font-size: 1.55rem;
+  line-height: 1.28;
+  color: var(--color-ink);
+  border-left: 2px solid var(--color-terracotta);
+  padding-left: 1.4rem;
+  margin-block: 2.25rem;
+  letter-spacing: -0.012em;
+}
+
+/* ──────────────────────────────────────────────
+   Prose styling for essays
+   ────────────────────────────────────────────── */
+
+.prose-essay {
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.prose-essay > p {
+  margin-block: 1em;
+}
+
+.prose-essay > p + p {
+  margin-block-start: 0;
+  text-indent: 1.4em;
+}
+
+.prose-essay h2 {
+  font-family: var(--font-display), serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 30, "WONK" 0, "opsz" 144;
+  margin-block: 2.25em 0.6em;
+  color: var(--color-ink);
+}
+
+.prose-essay h3 {
+  font-family: var(--font-display), serif;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-style: italic;
+  margin-block: 1.6em 0.4em;
+  color: var(--color-ink);
+}
+
+.prose-essay a {
+  color: var(--color-clinical);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-clinical) 35%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+.prose-essay a:hover {
+  color: var(--color-terracotta);
+  text-decoration-color: var(--color-terracotta);
+}
+
+.prose-essay em {
+  font-style: italic;
+}
+
+.prose-essay strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.prose-essay blockquote {
+  font-style: italic;
+  border-left: 2px solid var(--color-terracotta);
+  padding-left: 1.25rem;
+  margin-block: 1.5em;
+  color: var(--color-ink-soft);
+}
+
+.prose-essay hr {
+  border: 0;
+  text-align: center;
+  margin-block: 2.5em;
+  color: var(--color-ink-mute);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+}
+
+.prose-essay hr::before {
+  content: "§ § §";
+}
+
+.prose-essay ul,
+.prose-essay ol {
+  margin-block: 1.1em;
+  padding-inline-start: 1.4em;
+}
+
+.prose-essay li {
+  margin-block: 0.35em;
+}
+
+.prose-essay code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.92em;
+  background: var(--color-paper-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+/* ──────────────────────────────────────────────
+   Marginalia
+   ────────────────────────────────────────────── */
+
+.sidenote {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  letter-spacing: 0.005em;
+}
+
+/* ──────────────────────────────────────────────
+   Caret (›) and bilingual mono treatment
+   ────────────────────────────────────────────── */
+
+.caret::before {
+  content: "›";
+  color: var(--color-terracotta);
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+
+.bilingual {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-mute);
+  text-transform: uppercase;
+}
+
+/* ──────────────────────────────────────────────
+   Focus + motion
+   ────────────────────────────────────────────── */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
