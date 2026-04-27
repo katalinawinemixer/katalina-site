@@ -5,7 +5,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Reading",
   description:
-    "Books, primary sources, and recurring reads on clinical-trial operations, biotech, Latin America, and company-building.",
+    "Books, papers, newsletters, and primary sources I am reading about clinical trials, biotech, Latin America, and venture capital.",
   alternates: {
     canonical: absoluteUrl("/reading"),
   },
@@ -26,12 +26,12 @@ export default function Reading() {
         </div>
         <div className="md:col-span-9">
           <h1 className="font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
-            What I&rsquo;m reading and returning to.
+            What I&rsquo;m reading.
           </h1>
           <p className="mt-6 font-display italic text-[1.05rem] md:text-[1.15rem] leading-relaxed text-ink-soft max-w-[58ch]">
-            A running shelf, not a canon. Clinical trials, biotech, Latin
-            America, company-building, and the source material I keep close
-            when I need the room to get less abstract.
+            Books, papers, newsletters, and primary sources I&rsquo;m using to
+            learn more about clinical trials, biotech, Latin America, and
+            venture capital.
           </p>
         </div>
       </header>

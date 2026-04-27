@@ -16,78 +16,76 @@ export type ReadingSection = {
 export const READING: ReadingSection[] = [
   {
     heading: "Currently reading",
-    description:
-      "Open now, usually with too many tabs beside it.",
+    description: "The book I am reading right now.",
     entries: [
       {
         title: "Venture Deals",
         author: "Brad Feld, Jason Mendelson",
         year: "2019",
         note:
-          "The mechanics book. Term sheets, liquidation preferences, option pools, lead investors, syndicates, and the vocabulary that should feel ordinary rather than mystical.",
+          "A practical book on how startup financing works: term sheets, lead investors, option pools, liquidation preferences, and the language people use when they talk about venture deals.",
       },
     ],
   },
   {
     heading: "To read",
-    description:
-      "Queued because each one answers a question I keep running into: financing, markets, adoption, strategy, or valuation.",
+    description: "Books I want to read next.",
     entries: [
       {
         title: "Secrets of Sand Hill Road",
         author: "Scott Kupor",
         year: "2019",
         note:
-          "How venture looks from inside the firm: categories, founders, boards, down rounds, exits, and the parts of the job that do not show up in a term sheet.",
+          "A plain-English view of how venture firms think about founders, markets, boards, down rounds, and exits.",
       },
       {
         title: "The Business of Venture Capital",
         author: "Mahendra Ramsinghani",
         year: "2021",
         note:
-          "The firm-level view: LPs, fund formation, portfolio construction, reserves, and why a good company can still be a hard fit for a fund.",
+          "A deeper look at how VC funds work: LPs, fund formation, portfolio construction, reserves, and what happens after the check is written.",
       },
       {
         title: "The Power Law",
         author: "Sebastian Mallaby",
         year: "2022",
         note:
-          "A history of why venture behaves unlike normal finance: most bets fail, a few return the fund, and the incentives get strange from there.",
+          "A history of venture capital and why the whole industry is built around a small number of huge wins.",
       },
       {
         title: "7 Powers",
         author: "Hamilton Helmer",
         year: "2016",
         note:
-          "A compact strategy grammar: scale economies, network effects, counter-positioning, switching costs, brand, cornered resources, and process power.",
+          "A strategy book about why some companies become hard to compete with.",
       },
       {
         title: "Crossing the Chasm",
         author: "Geoffrey A. Moore",
         year: "1991",
         note:
-          "Still the cleanest way to think about why technically good products stall between early believers and mainstream buyers.",
+          "A book about why good products can still get stuck before they reach mainstream customers.",
       },
       {
         title: "The Cold Start Problem",
         author: "Andrew Chen",
         year: "2021",
         note:
-          "Network effects without the halo: when they are real, when they are wishful thinking, and how early liquidity actually gets created.",
+          "A book about network effects: when they are real, when they are not, and how early users start to build momentum.",
       },
       {
         title: "The Pharmagellan Guide to Biotech Forecasting and Valuation",
         author: "Frank S. David, Seth Robey, Andrew Matthews",
         year: "2017",
         note:
-          "For the biotech-specific math: R&D-stage assets, clinical assumptions, market share, development cost, and valuation without hand-waving.",
+          "A biotech-specific book on forecasting, clinical assumptions, market size, development costs, and valuation.",
       },
     ],
   },
   {
     heading: "Books I keep coming back to",
     description:
-      "Medicine, regulation, and the political economy around the work.",
+      "Books that shaped how I think about medicine, regulation, and Latin America.",
     entries: [
       {
         title: "The Emperor of All Maladies",
