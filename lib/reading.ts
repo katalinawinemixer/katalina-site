@@ -16,7 +16,6 @@ export type ReadingSection = {
 export const READING: ReadingSection[] = [
   {
     heading: "Currently reading",
-    description: "The book I am reading right now.",
     entries: [
       {
         title: "Venture Deals",
@@ -29,7 +28,6 @@ export const READING: ReadingSection[] = [
   },
   {
     heading: "To read",
-    description: "Books I want to read next.",
     entries: [
       {
         title: "Secrets of Sand Hill Road",
