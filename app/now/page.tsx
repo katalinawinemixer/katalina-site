@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -72,6 +73,18 @@ export default function Now() {
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             Currently
           </p>
+          <figure className="mt-8 max-w-[16rem] overflow-hidden border border-rule">
+            <Image
+              src="/images/now-katalina.jpeg"
+              alt="Katalina Londoño"
+              width={534}
+              height={800}
+              unoptimized
+              priority
+              sizes="(min-width: 768px) 16rem, 80vw"
+              className="aspect-[2/3] w-full scale-[1.18] object-cover object-[54%_44%]"
+            />
+          </figure>
         </div>
         <dl className="md:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-6 border-t border-rule">
           {CURRENTLY.map(([label, value]) => (

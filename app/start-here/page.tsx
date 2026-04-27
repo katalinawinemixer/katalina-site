@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 import EssayListItem from "../components/EssayListItem";
 import { essays } from "@/lib/essays";
 import { absoluteUrl } from "@/lib/site";
@@ -51,6 +52,18 @@ export default function StartHere() {
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             § 01 — What this is
           </p>
+          <figure className="mt-8 max-w-[16rem] overflow-hidden border border-rule">
+            <Image
+              src="/images/start-katalina.jpeg"
+              alt="Katalina Londoño"
+              width={768}
+              height={1024}
+              unoptimized
+              priority
+              sizes="(min-width: 768px) 16rem, 80vw"
+              className="aspect-[3/4] w-full object-cover object-[48%_42%]"
+            />
+          </figure>
         </div>
         <div className="md:col-span-9 prose-essay max-w-none">
           <p>

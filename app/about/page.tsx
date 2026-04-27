@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -58,18 +57,6 @@ export default function About() {
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             §&nbsp;01 — In short
           </p>
-          <figure className="mt-8 max-w-[16rem] overflow-hidden border border-rule">
-            <Image
-              src="/images/about-katalina.jpeg"
-              alt="Katalina Londoño"
-              width={534}
-              height={800}
-              unoptimized
-              priority
-              sizes="(min-width: 768px) 16rem, 80vw"
-              className="aspect-[2/3] w-full scale-[1.18] object-cover object-[54%_44%]"
-            />
-          </figure>
         </div>
         <div className="md:col-span-9 prose-essay max-w-none">
           <p>
