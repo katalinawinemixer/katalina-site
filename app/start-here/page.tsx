@@ -68,7 +68,7 @@ export default function StartHere() {
               and a therapy that quietly stalls.
             </p>
           </div>
-          <figure className="w-full max-w-[18rem] overflow-hidden border border-rule justify-self-start lg:justify-self-end">
+          <figure className="order-first w-full max-w-[18rem] overflow-hidden border border-rule justify-self-start lg:order-none lg:justify-self-end">
             <Image
               src="/images/start-katalina.jpeg"
               alt="Katalina Londoño"
