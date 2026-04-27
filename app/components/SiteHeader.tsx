@@ -20,10 +20,10 @@ export default function SiteHeader() {
       <div className="mx-auto max-w-[68rem] px-6 md:px-10 py-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
         <Link
           href="/"
-          className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft hover:text-terracotta transition-colors flex items-baseline gap-3"
+          className="text-ink-soft hover:text-terracotta transition-colors flex items-baseline gap-3"
         >
           <span aria-hidden="true" className="text-terracotta">§</span>
-          <span>Katalina Londoño</span>
+          <span className="header-wordmark">Katalina Londoño</span>
         </Link>
         <nav className="order-last flex w-full flex-wrap items-center justify-start gap-x-5 gap-y-3 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-soft sm:order-none sm:w-auto sm:gap-x-6 sm:text-[0.74rem]">
           {NAV.map((item) => {

@@ -70,6 +70,13 @@ body {
   font-size: clamp(2.55rem, 9.6vw, 6.65rem);
 }
 
+.header-wordmark {
+  font-family: var(--font-wordmark), var(--font-display), Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: -0.018em;
+}
+
 /* ──────────────────────────────────────────────
    Editorial rules
    ────────────────────────────────────────────── */
