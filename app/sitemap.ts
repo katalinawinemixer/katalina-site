@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { essays, getTagEntries } from "@/lib/essays";
 import { absoluteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 const staticRoutes = [
   "/",
   "/start-here",
