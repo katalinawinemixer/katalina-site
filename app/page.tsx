@@ -53,7 +53,38 @@ export default function Home() {
               <span className="block mt-1 normal-case tracking-[0.04em]">
                 Following: ASCO 2026 abstracts
               </span>
+              <span className="block mt-1 normal-case tracking-[0.04em]">
+                Working on: trial ops + LatAm biotech diligence
+              </span>
             </p>
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* ── Current focus ────────────────────────────── */}
+      <section className="py-14 md:py-20">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
+          <div className="md:col-span-3">
+            <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+              Current focus
+            </h2>
+          </div>
+          <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
+            <ul className="grid sm:grid-cols-3 gap-6">
+              {[
+                "Clinical-trial operations",
+                "Latin America as trial infrastructure",
+                "How investors should diligence execution risk",
+              ].map((item) => (
+                <li key={item} className="border-t border-rule-soft pt-4">
+                  <p className="font-display text-[1.22rem] leading-tight text-ink">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -60,6 +60,11 @@ export default function SiteFooter() {
               Now
             </Link>
           </p>
+          <p className="mt-1 normal-case tracking-[0.04em]">
+            <Link href="/contact" className="hover:text-terracotta transition-colors">
+              Contact
+            </Link>
+          </p>
         </div>
         <div className="md:col-span-3 md:text-right">
           <p className="font-display italic normal-case tracking-normal text-[1rem] text-ink">

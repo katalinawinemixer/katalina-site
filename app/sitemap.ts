@@ -12,6 +12,7 @@ const staticRoutes = [
   "/archive",
   "/reading",
   "/now",
+  "/contact",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

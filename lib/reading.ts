@@ -164,39 +164,4 @@ export const READING: ReadingSection[] = [
       },
     ],
   },
-  {
-    heading: "Ongoing reads",
-    description:
-      "Trade press and newsletters that help me notice what I would otherwise miss.",
-    entries: [
-      {
-        title: "Endpoints News",
-        venue: "endpts.com",
-        note:
-          "The trade press of choice for biotech operators. The clinical-development beat is reliable; the regulatory beat is reliable enough.",
-      },
-      {
-        title: "STAT — Pharmalot",
-        venue: "statnews.com",
-        note: "Ed Silverman on pharma regulation. Steady, accurate, occasionally surgical.",
-      },
-      {
-        title: "BioPharma Dive",
-        venue: "biopharmadive.com",
-        note: "More breadth than Endpoints, less depth. Useful for what I'm not already tracking.",
-      },
-      {
-        title: "Quarter Cap",
-        venue: "Substack",
-        note:
-          "Healthcare investing through a public-markets lens. I disagree with it sometimes. That is the value of it.",
-      },
-      {
-        title: "Bits in Bio",
-        venue: "Substack",
-        note:
-          "Where I learn about what software is actually being used in the lab and the trial. Not a venture newsletter. The signal is in the implementation detail.",
-      },
-    ],
-  },
 ];

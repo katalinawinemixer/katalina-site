@@ -70,10 +70,27 @@ export default function StartHere() {
 
       <hr className="rule" />
 
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-20">
+        <div className="md:col-span-3">
+          <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            § 02 — If you are here from biotech or venture
+          </p>
+        </div>
+        <div className="md:col-span-9 prose-essay max-w-none">
+          <p>
+            Start with the pieces that make the operating argument clearest:
+            what breaks in trial execution, why Latin America matters, and how
+            diligence changes when you look at the work from inside the site.
+          </p>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            § 02 — Read these first
+            § 03 — Read these first
           </p>
         </div>
         <ol className="md:col-span-9 list-none border-t border-rule-soft">
@@ -88,7 +105,7 @@ export default function StartHere() {
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-20">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            § 03 — Then browse
+            § 04 — Then browse
           </p>
         </div>
         <div className="md:col-span-9 grid sm:grid-cols-3 gap-8">

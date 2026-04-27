@@ -13,17 +13,17 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "Running regulatory ops for the heme-onc trial portfolio at UW while building a sharper public body of work around trial operations, LatAm biotech, and investor diligence from the coordinator's side of the table.",
+      "Running regulatory ops for the heme-onc trial portfolio at UW and writing more clearly about trial operations, LatAm biotech, and what execution risk looks like from inside the site.",
   },
   {
     lead: "Writing desk",
     body:
-      "A longer piece on how COFEPRIS reform changes the cost structure for US biotechs running Phase I/II trials in Mexico. Also a follow-up to the FDA-inspection essay, this time on deviation reconciliation as a discipline rather than a cleanup task.",
+      "Drafting a piece on how COFEPRIS reform changes the cost of running Phase I/II trials in Mexico, plus a follow-up to the FDA-inspection essay on deviation reconciliation.",
   },
   {
     lead: "Reading stack",
     body:
-      "Venture Deals for the mechanics of term sheets and financing rounds; Mukherjee's Emperor of All Maladies on a slow reread; Galeano's Open Veins in Spanish, two chapters at a time; ANVISA and COFEPRIS updates with the kind of attention other people reserve for playoff brackets.",
+      "Venture Deals for the mechanics of startup financing, The Emperor of All Maladies on a slow reread, Open Veins in Spanish, and ANVISA/COFEPRIS updates as they come out.",
   },
   {
     lead: "Following",
@@ -33,12 +33,12 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Open to",
     body:
-      "Conversations with biotech investors underwriting Phase I/II programs, LatAm-focused funds thinking about bio dealflow, and anyone running a trial site in São Paulo, CDMX, Bogotá, or Buenos Aires whose work I should understand.",
+      "Conversations with biotech investors underwriting Phase I/II programs, LatAm-focused funds thinking about bio dealflow, and trial-site operators in São Paulo, CDMX, Bogotá, or Buenos Aires.",
   },
   {
     lead: "In SF",
     body:
-      "Still building the part of my life that happens at small tables in unhurried neighborhoods. If you live here, work around biotech, clinical operations, or LatAm investing, and something here resonates, I would genuinely like to meet for coffee.",
+      "Based in San Francisco. If you work around biotech, clinical operations, or LatAm investing and something here resonates, I would be glad to meet for coffee.",
   },
 ];
 
@@ -109,22 +109,6 @@ export default function Now() {
           </li>
         ))}
       </ol>
-
-      <hr className="rule mt-20 md:mt-28" />
-
-      <div className="grid md:grid-cols-12 gap-6 md:gap-10 mt-10">
-        <p className="md:col-span-9 md:col-start-4 font-display italic text-[1.05rem] leading-relaxed text-ink-soft">
-          This page changes when the actual shape of the month changes. The{" "}
-          <a
-            href="https://nownownow.com/about"
-            className="text-clinical hover:text-terracotta underline-offset-[3px] underline decoration-1 decoration-clinical/40 hover:decoration-terracotta transition-colors"
-          >
-            /now page
-          </a>{" "}
-          convention comes from Derek Sivers. I kept the spirit and let the
-          formatting wear better shoes.
-        </p>
-      </div>
     </div>
   );
 }
