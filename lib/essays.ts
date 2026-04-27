@@ -34,6 +34,34 @@ export type EssayMeta = {
 
 export const essays: EssayMeta[] = [
   {
+    slug: "what-biotech-investors-miss",
+    title: "What biotech investors miss about clinical-trial operations",
+    dek:
+      "Most diligence treats trial operations as execution detail. That is where timelines slip, clean data gets expensive, and the real company shows up.",
+    date: "2026-04-27",
+    readingTime: "10 min",
+    tags: ["diligence", "operator"],
+  },
+  {
+    slug: "diligencing-phase-one-two-biotech",
+    title: "How I would diligence a Phase I/II biotech company",
+    dek:
+      "The questions I would ask before underwriting an early clinical program: enrollment, site quality, protocol friction, regulatory discipline, and whether the team knows what breaks first.",
+    date: "2026-04-24",
+    readingTime: "11 min",
+    tags: ["diligence", "thesis", "operator"],
+  },
+  {
+    slug: "clinical-trial-software-stack",
+    title:
+      "The clinical-trial software stack, from someone who has actually used it",
+    dek:
+      "Veeva, Florence, OnCore, Medidata, PreClarus, SIP. What the tools promise, what they actually do, and why implementation matters more than the demo.",
+    date: "2026-04-20",
+    readingTime: "9 min",
+    tags: ["operator", "diligence"],
+  },
+  {
     slug: "fda-shows-up",
     title:
       "When the FDA shows up: a coordinator’s notes from inside the eTMF",

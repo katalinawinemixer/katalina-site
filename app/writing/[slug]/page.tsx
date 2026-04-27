@@ -5,6 +5,12 @@ import { essays, getEssay, formatDate, getTagLabel } from "@/lib/essays";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const ESSAY_LOADERS: Record<string, () => Promise<{ default: React.ComponentType }>> = {
+  "what-biotech-investors-miss": () =>
+    import("@/content/essays/what-biotech-investors-miss.mdx"),
+  "diligencing-phase-one-two-biotech": () =>
+    import("@/content/essays/diligencing-phase-one-two-biotech.mdx"),
+  "clinical-trial-software-stack": () =>
+    import("@/content/essays/clinical-trial-software-stack.mdx"),
   "fda-shows-up": () => import("@/content/essays/fda-shows-up.mdx"),
   "latin-america-trial-frontier": () =>
     import("@/content/essays/latin-america-trial-frontier.mdx"),

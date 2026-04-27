@@ -51,6 +51,11 @@ export default function SiteFooter() {
             </Link>
           </p>
           <p className="mt-1 normal-case tracking-[0.04em]">
+            <Link href="/venture" className="hover:text-terracotta transition-colors">
+              Venture
+            </Link>
+          </p>
+          <p className="mt-1 normal-case tracking-[0.04em]">
             <Link href="/archive" className="hover:text-terracotta transition-colors">
               Archive
             </Link>

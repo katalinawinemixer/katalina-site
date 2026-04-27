@@ -21,9 +21,11 @@ export const metadata: Metadata = {
 export default function Home() {
   const featured = essays.filter((essay) =>
     [
+      "what-biotech-investors-miss",
+      "diligencing-phase-one-two-biotech",
+      "clinical-trial-software-stack",
       "fda-shows-up",
       "latin-america-trial-frontier",
-      "phase-one-failure-modes",
     ].includes(essay.slug),
   );
 
@@ -35,11 +37,11 @@ export default function Home() {
         <div className="mt-10 md:mt-16 grid md:grid-cols-12 gap-6 md:gap-10">
           <p className="md:col-span-8 md:col-start-2 text-[1.18rem] md:text-[1.36rem] leading-[1.5] text-ink">
             <span className="font-display italic text-terracotta">Notas</span>{" "}
-            on clinical-trial operations, the regulatory edges where early-phase
-            therapies actually fail, and why Latin America is becoming the most
-            interesting place in the world to run a Phase&nbsp;I trial. Writing
-            from San&nbsp;Francisco; remote with a heme-onc program at
-            UW&nbsp;Seattle.
+            from inside clinical-trial operations. I write about where
+            early-phase biotech breaks, why Latin America is becoming serious
+            trial infrastructure, and what investors should ask before the
+            polished memo hides the operational risk. Based in San&nbsp;Francisco;
+            remote with a heme-onc program at UW&nbsp;Seattle.
           </p>
           <div className="md:col-span-3 md:col-start-10 flex md:justify-end">
             <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-mute leading-relaxed">
@@ -85,6 +87,12 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/venture"
+              className="mt-8 inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+            >
+              For biotech and venture readers →
+            </Link>
           </div>
         </div>
       </section>
