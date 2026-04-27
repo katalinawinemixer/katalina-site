@@ -23,7 +23,7 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Reading stack",
     body:
-      "Mukherjee's Emperor of All Maladies on a slow reread; Galeano's Open Veins in Spanish, two chapters at a time; ANVISA and COFEPRIS updates with the kind of attention other people reserve for playoff brackets.",
+      "Venture Deals for the mechanics of term sheets and financing rounds; Mukherjee's Emperor of All Maladies on a slow reread; Galeano's Open Veins in Spanish, two chapters at a time; ANVISA and COFEPRIS updates with the kind of attention other people reserve for playoff brackets.",
   },
   {
     lead: "Watching",
@@ -44,7 +44,7 @@ const STANZAS: { lead: string; body: string }[] = [
 
 const CURRENTLY = [
   ["Base", "San Francisco"],
-  ["Book", "The Emperor of All Maladies"],
+  ["Book", "Venture Deals"],
   ["Tab", "ASCO 2026 abstracts"],
   ["Question", "Where does LatAm trial capacity become investable infrastructure?"],
 ];

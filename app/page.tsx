@@ -47,7 +47,7 @@ export default function Home() {
               <span className="block mt-1 normal-case tracking-[0.04em]">
                 Reading:{" "}
                 <em className="font-display not-italic text-ink">
-                  The Emperor of All Maladies
+                  Venture Deals
                 </em>
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em]">
