@@ -64,6 +64,7 @@ export default function About() {
               alt="Katalina Londoño"
               width={534}
               height={800}
+              unoptimized
               priority
               sizes="(min-width: 768px) 16rem, 80vw"
               className="aspect-[2/3] w-full border border-rule object-cover"
