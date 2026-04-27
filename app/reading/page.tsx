@@ -5,7 +5,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Reading",
   description:
-    "Books, papers, newsletters, and companies on the clinical-trial operations beat — annotated.",
+    "Books, primary sources, and recurring reads on clinical-trial operations, biotech, Latin America, and company-building.",
   alternates: {
     canonical: absoluteUrl("/reading"),
   },
@@ -26,13 +26,12 @@ export default function Reading() {
         </div>
         <div className="md:col-span-9">
           <h1 className="font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
-            A working bibliography for clinical-trial operations and Latin
-            American biotech.
+            What I&rsquo;m reading and returning to.
           </h1>
           <p className="mt-6 font-display italic text-[1.05rem] md:text-[1.15rem] leading-relaxed text-ink-soft max-w-[58ch]">
-            This is what I read, what I cite, and what I keep returning to. It
-            is annotated for the same reason most lists aren&rsquo;t: the value
-            of a reading list lives in the reasons, not the entries.
+            A running shelf, not a canon. Clinical trials, biotech, Latin
+            America, company-building, and the source material I keep close
+            when I need the room to get less abstract.
           </p>
         </div>
       </header>

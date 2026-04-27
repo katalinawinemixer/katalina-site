@@ -17,7 +17,7 @@ export const READING: ReadingSection[] = [
   {
     heading: "Currently reading",
     description:
-      "What is open now, usually with too many tabs beside it.",
+      "Open now, usually with too many tabs beside it.",
     entries: [
       {
         title: "Venture Deals",
@@ -31,7 +31,7 @@ export const READING: ReadingSection[] = [
   {
     heading: "To read",
     description:
-      "A short shelf for getting sharper about how young companies are financed, judged, and built.",
+      "Queued because each one answers a question I keep running into: financing, markets, adoption, strategy, or valuation.",
     entries: [
       {
         title: "Secrets of Sand Hill Road",
@@ -85,9 +85,9 @@ export const READING: ReadingSection[] = [
     ],
   },
   {
-    heading: "Books",
+    heading: "Books I keep coming back to",
     description:
-      "Slow reads, mostly oncology, clinical research, and the political economy behind the thesis.",
+      "Medicine, regulation, and the political economy around the work.",
     entries: [
       {
         title: "The Emperor of All Maladies",
@@ -127,9 +127,9 @@ export const READING: ReadingSection[] = [
     ],
   },
   {
-    heading: "Papers, reports, and primary sources",
+    heading: "Primary sources",
     description:
-      "What I read when I'm forming a view on a regulatory or operational question.",
+      "Regulations, guidance, and datasets I use when I need the source material.",
     entries: [
       {
         title: "FDA Guidance for Industry: Diversity Plans for Clinical Trials",
@@ -169,9 +169,9 @@ export const READING: ReadingSection[] = [
     ],
   },
   {
-    heading: "Newsletters and ongoing reads",
+    heading: "Ongoing reads",
     description:
-      "What lands in my inbox. I read most of them at coffee on Saturdays.",
+      "Trade press and newsletters that help me notice what I would otherwise miss.",
     entries: [
       {
         title: "Endpoints News",
@@ -200,42 +200,6 @@ export const READING: ReadingSection[] = [
         venue: "Substack",
         note:
           "Where I learn about what software is actually being used in the lab and the trial. Not a venture newsletter. The signal is in the implementation detail.",
-      },
-    ],
-  },
-  {
-    heading: "Companies I'm watching",
-    description:
-      "Not investment advice. A list of companies whose operating choices I am paying attention to.",
-    entries: [
-      {
-        title: "Florence Healthcare",
-        venue: "Atlanta, GA",
-        note:
-          "I use their eReg every day. Their trajectory is the canary for whether clinical-trial software can become a real category outside of Veeva.",
-      },
-      {
-        title: "Faro Health",
-        venue: "San Diego",
-        note:
-          "Protocol design tooling. The premise &mdash; that the protocol is the upstream artifact whose quality determines everything downstream &mdash; is correct.",
-      },
-      {
-        title: "Castor",
-        venue: "Amsterdam / NYC",
-        note:
-          "Decentralized-trial infrastructure. Whether their mid-market motion compounds is the bellwether for whether DCT actually fits the operational reality of Phase I-III oncology.",
-      },
-      {
-        title: "Beaker Health",
-        venue: "São Paulo",
-        note:
-          "LatAm-anchored CRO ops. The team I would build a thesis around if I were going to build a thesis around a single regional operator.",
-      },
-      {
-        title: "The next bilingual operator-investor in SF",
-        venue: "Wherever they are",
-        note: "Will recognize them when I meet them. Probably writing publicly already.",
       },
     ],
   },
