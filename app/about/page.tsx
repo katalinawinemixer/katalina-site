@@ -33,16 +33,6 @@ const TIMELINE: { year: string; role: string; place: string; note?: string }[] =
       note:
         "Built a QC system for pharmacokinetic sample collection and processing. Cut protocol deviations 25% and shipment errors 50%.",
     },
-    {
-      year: "2026",
-      role: "B.S., Applied Health Sciences",
-      place: "Eastern Florida State College — one course remaining",
-    },
-    {
-      year: "2021",
-      role: "A.A.",
-      place: "Valencia College, Orlando",
-    },
   ];
 
 export default function About() {
