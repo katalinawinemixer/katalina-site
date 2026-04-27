@@ -10,28 +10,25 @@ export const metadata: Metadata = {
   },
 };
 
-const TIMELINE: { year: string; role: string; place: string; note?: string }[] =
+const PATH: { year: string; title: string; body: string }[] =
   [
     {
       year: "2024 →",
-      role: "Regulatory Affairs Coordinator",
-      place: "University of Washington · Division of Medical Oncology",
-      note:
-        "Document floor for 18–21 concurrent Phase I–III heme-onc trials. Two sponsor audits and one FDA inspection in 2025; zero critical findings.",
+      title: "The document floor",
+      body:
+        "Now I run the regulatory document layer for a heme-onc trial portfolio at UW. It is the part of clinical research where amendments, deviations, audits, training records, and FDA inspection questions all meet in one very unforgiving place.",
     },
     {
       year: "2023–24",
-      role: "Clinical Research Coordinator I",
-      place: "PPD (Thermo Fisher) · Orlando",
-      note:
-        "Early-phase trials in neurology, RSV, asthma, COVID, chikungunya. Eligibility, consent, EDC, queries, source-data QC.",
+      title: "The clinic floor",
+      body:
+        "Before that I coordinated early-phase trials in Orlando. I learned the patient-facing version of the work: eligibility, consent, source data, queries, and the very practical difference between a protocol that looks clean and one a site can actually run.",
     },
     {
       year: "2022–23",
-      role: "Research Lab Technician I/II",
-      place: "Orlando",
-      note:
-        "Built a QC system for pharmacokinetic sample collection and processing. Cut protocol deviations 25% and shipment errors 50%.",
+      title: "The lab floor",
+      body:
+        "The first place clinical operations made sense to me was the lab. Pharmacokinetic samples, shipment windows, labels, handoffs, and all the small process failures that become big data problems if nobody designs a better system.",
     },
   ];
 
@@ -110,15 +107,15 @@ export default function About() {
 
       <hr className="rule" />
 
-      {/* ── Timeline ──────────────────────────────────── */}
+      {/* ── Path ──────────────────────────────────────── */}
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            §&nbsp;02 — Where I&rsquo;ve been
+            §&nbsp;02 — How I got here
           </p>
         </div>
         <ol className="md:col-span-9 list-none border-t border-rule-soft">
-          {TIMELINE.map((entry, idx) => (
+          {PATH.map((entry, idx) => (
             <li
               key={idx}
               className="grid grid-cols-[5.5rem_1fr] md:grid-cols-[7rem_1fr] gap-5 md:gap-8 py-6 md:py-7 border-b border-rule-soft"
@@ -128,16 +125,11 @@ export default function About() {
               </div>
               <div>
                 <h3 className="font-display text-[1.25rem] md:text-[1.4rem] leading-[1.15] tracking-[-0.012em] text-ink">
-                  {entry.role}
+                  {entry.title}
                 </h3>
-                <p className="mt-1 font-mono text-[0.74rem] uppercase tracking-[0.06em] text-ink-soft normal-case">
-                  {entry.place}
+                <p className="mt-3 text-ink-soft leading-snug max-w-[60ch]">
+                  {entry.body}
                 </p>
-                {entry.note ? (
-                  <p className="mt-3 text-ink-soft leading-snug max-w-[60ch]">
-                    {entry.note}
-                  </p>
-                ) : null}
               </div>
             </li>
           ))}
