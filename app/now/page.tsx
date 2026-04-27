@@ -26,9 +26,9 @@ const STANZAS: { lead: string; body: string }[] = [
       "Venture Deals for the mechanics of term sheets and financing rounds; Mukherjee's Emperor of All Maladies on a slow reread; Galeano's Open Veins in Spanish, two chapters at a time; ANVISA and COFEPRIS updates with the kind of attention other people reserve for playoff brackets.",
   },
   {
-    lead: "Watching",
+    lead: "Following",
     body:
-      "ASCO 2026 abstracts, COFEPRIS modernization throughput numbers, and a handful of LatAm-anchored early-stage biotechs whose names I will share when there is something public to point to.",
+      "ASCO 2026 abstracts, COFEPRIS modernization updates, and regulatory changes that affect where early-phase oncology trials can actually run.",
   },
   {
     lead: "Open to",
@@ -45,7 +45,7 @@ const STANZAS: { lead: string; body: string }[] = [
 const CURRENTLY = [
   ["Base", "San Francisco"],
   ["Book", "Venture Deals"],
-  ["Tab", "ASCO 2026 abstracts"],
+  ["Following", "ASCO 2026 abstracts"],
   ["Question", "Where does LatAm trial capacity become investable infrastructure?"],
 ];
 

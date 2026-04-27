@@ -51,7 +51,7 @@ export default function Home() {
                 </em>
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em]">
-                Watching: ASCO 2026 abstracts
+                Following: ASCO 2026 abstracts
               </span>
             </p>
           </div>
