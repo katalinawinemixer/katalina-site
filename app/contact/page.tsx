@@ -44,6 +44,20 @@ export default function Contact() {
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-20">
         <div className="md:col-span-3">
           <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            Looking for
+          </h2>
+        </div>
+        <div className="md:col-span-9 border-t border-rule pt-5">
+          <p className="font-display text-[1.45rem] md:text-[1.85rem] leading-snug text-ink max-w-[56ch]">
+            I&rsquo;m interested in roles where clinical operations, biotech
+            investing, and emerging-market healthcare infrastructure overlap.
+          </p>
+        </div>
+      </section>
+
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-20">
+        <div className="md:col-span-3">
+          <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             Open to
           </h2>
         </div>

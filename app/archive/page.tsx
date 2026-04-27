@@ -1,6 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { essays, formatDateShort, getTagLabel } from "@/lib/essays";
+import {
+  type EssayTag,
+  essays,
+  formatDateShort,
+  getTagLabel,
+} from "@/lib/essays";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -22,6 +27,14 @@ const grouped = essays.reduce<Record<string, typeof essays>>((acc, essay) => {
   return acc;
 }, {});
 
+const themeGroups: { label: string; tag: EssayTag }[] = [
+  { label: "Clinical operations", tag: "operator" },
+  { label: "LatAm biotech", tag: "latam" },
+  { label: "Regulatory", tag: "regulatory" },
+  { label: "Diligence", tag: "diligence" },
+  { label: "Software", tag: "software" },
+];
+
 export default function Archive() {
   const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 
@@ -37,11 +50,56 @@ export default function Archive() {
           </p>
         </div>
         <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.2rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
-          The whole shelf, arranged by date.
+          The whole archive, easier to browse by theme or date.
         </h1>
       </header>
 
-      <div className="space-y-16 md:space-y-20">
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-20">
+        <div className="md:col-span-3">
+          <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            Browse by theme
+          </p>
+        </div>
+        <div className="md:col-span-9 grid gap-8 sm:grid-cols-2">
+          {themeGroups.map((group) => {
+            const tagged = essays.filter((essay) =>
+              essay.tags.includes(group.tag),
+            );
+
+            return (
+              <section
+                key={group.tag}
+                className="border-t border-rule-soft pt-5"
+              >
+                <h2 className="font-display text-[1.35rem] leading-tight text-ink">
+                  {group.label}
+                </h2>
+                <ol className="mt-4 list-none space-y-3">
+                  {tagged.map((essay) => (
+                    <li key={essay.slug}>
+                      <Link
+                        href={`/writing/${essay.slug}`}
+                        className="group block"
+                      >
+                        <span className="block text-[0.98rem] leading-snug text-ink-soft group-hover:text-terracotta transition-colors">
+                          {essay.title}
+                        </span>
+                        <span className="mt-1 block font-mono text-[0.66rem] uppercase tracking-[0.08em] text-ink-mute">
+                          {essay.readingTime}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            );
+          })}
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      <div className="space-y-16 md:space-y-20 pt-16 md:pt-20">
         {years.map((year) => (
           <section key={year} className="grid md:grid-cols-12 gap-6 md:gap-10">
             <div className="md:col-span-3">

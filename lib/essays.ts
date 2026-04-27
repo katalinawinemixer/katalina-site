@@ -19,6 +19,10 @@ export const tagMeta = {
     label: "Diligence",
     dek: "Questions investors should ask when the polished memo misses the operational reality.",
   },
+  software: {
+    label: "Software",
+    dek: "The clinical-trial tools, systems, and implementation details that shape how work actually gets done.",
+  },
 } as const;
 
 export type EssayTag = keyof typeof tagMeta;
@@ -59,7 +63,7 @@ export const essays: EssayMeta[] = [
       "Veeva, Florence, OnCore, Medidata, PreClarus, SIP. What the tools promise, what they actually do, and why implementation matters more than the demo.",
     date: "2026-04-20",
     readingTime: "9 min",
-    tags: ["operator", "diligence"],
+    tags: ["operator", "diligence", "software"],
   },
   {
     slug: "fda-shows-up",
