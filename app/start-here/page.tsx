@@ -52,7 +52,23 @@ export default function StartHere() {
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             § 01 — What this is
           </p>
-          <figure className="mt-8 max-w-[16rem] overflow-hidden border border-rule">
+        </div>
+        <div className="md:col-span-9 grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
+          <div className="prose-essay max-w-none">
+            <p>
+              This site is where I write from inside the clinical trial: the
+              regulatory folders, the sponsor audits, the protocol amendments,
+              the awkward software, the patient timelines, and the places where
+              an elegant biotech story becomes a messy operational system.
+            </p>
+            <p>
+              The bigger argument is that clinical operations are not a back
+              office detail. They are part of the product, part of the
+              diligence, and often the difference between a therapy that moves
+              and a therapy that quietly stalls.
+            </p>
+          </div>
+          <figure className="w-full max-w-[18rem] overflow-hidden border border-rule justify-self-start lg:justify-self-end">
             <Image
               src="/images/start-katalina.jpeg"
               alt="Katalina Londoño"
@@ -64,20 +80,6 @@ export default function StartHere() {
               className="aspect-[3/4] w-full object-cover object-[48%_42%]"
             />
           </figure>
-        </div>
-        <div className="md:col-span-9 prose-essay max-w-none">
-          <p>
-            This site is where I write from inside the clinical trial: the
-            regulatory folders, the sponsor audits, the protocol amendments,
-            the awkward software, the patient timelines, and the places where
-            an elegant biotech story becomes a messy operational system.
-          </p>
-          <p>
-            The bigger argument is that clinical operations are not a back
-            office detail. They are part of the product, part of the diligence,
-            and often the difference between a therapy that moves and a therapy
-            that quietly stalls.
-          </p>
         </div>
       </section>
 

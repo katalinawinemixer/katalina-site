@@ -73,7 +73,21 @@ export default function Now() {
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
             Currently
           </p>
-          <figure className="mt-8 max-w-[16rem] overflow-hidden border border-rule">
+        </div>
+        <div className="md:col-span-9 grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start border-t border-rule pt-6">
+          <dl className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
+            {CURRENTLY.map(([label, value]) => (
+              <div key={label}>
+                <dt className="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-mute">
+                  {label}
+                </dt>
+                <dd className="mt-2 font-display text-[1.25rem] leading-tight text-ink">
+                  {value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <figure className="w-full max-w-[18rem] overflow-hidden border border-rule justify-self-start lg:justify-self-end">
             <Image
               src="/images/now-katalina.jpeg"
               alt="Katalina Londoño"
@@ -86,18 +100,6 @@ export default function Now() {
             />
           </figure>
         </div>
-        <dl className="md:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-6 border-t border-rule">
-          {CURRENTLY.map(([label, value]) => (
-            <div key={label} className="pt-5">
-              <dt className="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-mute">
-                {label}
-              </dt>
-              <dd className="mt-2 font-display text-[1.25rem] leading-tight text-ink">
-                {value}
-              </dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       <hr className="rule" />
