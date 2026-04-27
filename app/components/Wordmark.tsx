@@ -6,14 +6,7 @@ type Props = {
 };
 
 export default function Wordmark({ variant = "hero", asLink = false }: Props) {
-  const inner = (
-    <>
-      <span aria-hidden="true">
-        Katalina Londo<span className="enye">n</span>o
-      </span>
-      <span className="sr-only">Katalina Londoño</span>
-    </>
-  );
+  const inner = <span className="wordmark-text">Katalina Londoño</span>;
 
   if (variant === "compact") {
     return asLink ? (

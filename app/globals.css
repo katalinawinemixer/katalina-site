@@ -14,7 +14,7 @@
   --color-rule-soft: #e6decb;
   --color-ochre: #c99a2b;
 
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-source-serif);
   --font-body: var(--font-newsreader);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -52,37 +52,22 @@ body {
    ────────────────────────────────────────────── */
 
 .wordmark {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-wordmark), var(--font-display), Georgia, serif;
   font-weight: 400;
-  font-variation-settings: "SOFT" 50, "WONK" 0, "opsz" 144;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  letter-spacing: -0.03em;
+  line-height: 0.94;
   color: var(--color-ink);
   display: block;
 }
 
-.wordmark-hero {
-  font-size: clamp(3rem, 13vw, 9.5rem);
-}
-
-.wordmark .enye {
-  position: relative;
+.wordmark-text {
   display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
-.wordmark .enye::after {
-  content: "˜";
-  position: absolute;
-  top: -0.06em;
-  left: 50%;
-  transform: translate(-52%, 0) scaleX(1.25);
-  color: var(--color-terracotta);
-  font-family: var(--font-display), serif;
-  font-variation-settings: "WONK" 1, "SOFT" 100, "opsz" 144;
-  font-size: 0.58em;
-  font-weight: 600;
-  pointer-events: none;
-  line-height: 1;
+.wordmark-hero {
+  font-size: clamp(2.55rem, 9.6vw, 6.65rem);
 }
 
 /* ──────────────────────────────────────────────
@@ -119,7 +104,7 @@ body {
 
 .dropcap > p:first-of-type::first-letter {
   font-family: var(--font-display), Georgia, serif;
-  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+  font-variation-settings: "opsz" 60;
   color: var(--color-terracotta);
   float: left;
   font-size: 5em;
@@ -136,7 +121,7 @@ body {
 .pullquote {
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;
-  font-variation-settings: "SOFT" 80, "WONK" 0, "opsz" 144;
+  font-variation-settings: "opsz" 60;
   font-size: 1.55rem;
   line-height: 1.28;
   color: var(--color-ink);
@@ -171,7 +156,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-variation-settings: "SOFT" 30, "WONK" 0, "opsz" 144;
+  font-variation-settings: "opsz" 48;
   margin-block: 2.25em 0.6em;
   color: var(--color-ink);
 }

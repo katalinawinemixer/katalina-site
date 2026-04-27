@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { essays, getEssay, formatDate } from "@/lib/essays";
+import { essays, getEssay, formatDate, getTagLabel } from "@/lib/essays";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const ESSAY_LOADERS: Record<string, () => Promise<{ default: React.ComponentType }>> = {
   "fda-shows-up": () => import("@/content/essays/fda-shows-up.mdx"),
@@ -26,14 +27,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const meta = getEssay(slug);
   if (!meta) return {};
+  const url = absoluteUrl(`/writing/${meta.slug}`);
   return {
     title: meta.title,
     description: meta.dek,
+    alternates: {
+      canonical: url,
+    },
+    authors: [{ name: siteConfig.author, url: siteConfig.url }],
     openGraph: {
       title: meta.title,
       description: meta.dek,
+      url,
       type: "article",
       publishedTime: meta.date,
+      authors: [siteConfig.author],
+      tags: meta.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.dek,
     },
   };
 }
@@ -64,13 +78,13 @@ export default async function EssayPage({
           </Link>
           <span className="mx-3 text-rule">/</span>
           <span className="text-terracotta/80">
-            {meta.tags.slice(0, 2).join(" · ")}
+            {meta.tags.slice(0, 2).map(getTagLabel).join(" · ")}
           </span>
         </p>
-        <h1 className="mt-6 font-display text-[2.1rem] md:text-[3rem] leading-[1.05] tracking-[-0.025em] text-ink">
+        <h1 className="mt-6 font-display text-[1.95rem] md:text-[3rem] leading-[1.08] md:leading-[1.05] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
           {meta.title}
         </h1>
-        <p className="mt-5 font-display italic text-[1.2rem] md:text-[1.35rem] leading-snug text-ink-soft">
+        <p className="mt-5 font-display italic text-[1.08rem] md:text-[1.35rem] leading-snug text-ink-soft">
           {meta.dek}
         </p>
         <p className="mt-7 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-ink-mute">
@@ -93,6 +107,23 @@ export default async function EssayPage({
 
       {/* ── Footer rule ───────────────────────────────── */}
       <hr className="rule mt-16 md:mt-20 mb-10" />
+
+      <div className="mb-10">
+        <p className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink-mute">
+          Filed under
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {meta.tags.map((tag) => (
+            <Link
+              key={tag}
+              href={`/topics/${tag}`}
+              className="border border-rule-soft px-3 py-2 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-ink-soft hover:border-terracotta hover:text-terracotta transition-colors"
+            >
+              {getTagLabel(tag)}
+            </Link>
+          ))}
+        </div>
+      </div>
 
       {/* ── Prev / Next ───────────────────────────────── */}
       <nav className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SiteFooter() {
   const year = new Date().getFullYear();
   return (
@@ -12,7 +14,7 @@ export default function SiteFooter() {
             Remote with the heme-onc program at UW Seattle
           </p>
         </div>
-        <div className="md:col-span-4">
+        <div className="md:col-span-3">
           <p className="text-ink-mute">Contact</p>
           <p className="mt-2 normal-case tracking-[0.04em]">
             <a
@@ -41,11 +43,33 @@ export default function SiteFooter() {
             </a>
           </p>
         </div>
-        <div className="md:col-span-4 md:text-right">
+        <div className="md:col-span-2">
+          <p className="text-ink-mute">Small doors</p>
+          <p className="mt-2 normal-case tracking-[0.04em]">
+            <Link href="/start-here" className="hover:text-terracotta transition-colors">
+              Start here
+            </Link>
+          </p>
+          <p className="mt-1 normal-case tracking-[0.04em]">
+            <Link href="/archive" className="hover:text-terracotta transition-colors">
+              Archive
+            </Link>
+          </p>
+          <p className="mt-1 normal-case tracking-[0.04em]">
+            <Link href="/now" className="hover:text-terracotta transition-colors">
+              Now
+            </Link>
+          </p>
+        </div>
+        <div className="md:col-span-3 md:text-right">
           <p className="font-display italic normal-case tracking-normal text-[1rem] text-ink">
             Hecho con cuidado.
           </p>
-          <p className="mt-2 text-ink-mute oldstyle">© {year}</p>
+          <p className="mt-2 normal-case tracking-[0.04em] text-ink-mute">
+            Built with Bun, Next.js, too much coffee, and a suspiciously strong
+            attachment to clean documents.
+          </p>
+          <p className="mt-3 text-ink-mute oldstyle">© {year}</p>
         </div>
       </div>
     </footer>

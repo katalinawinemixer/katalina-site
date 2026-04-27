@@ -1,8 +1,32 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Wordmark from "./components/Wordmark";
-import { essays, formatDateShort } from "@/lib/essays";
+import EssayListItem from "./components/EssayListItem";
+import { essays, getTagEntries } from "@/lib/essays";
+import { absoluteUrl, siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description: siteConfig.description,
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: absoluteUrl("/"),
+  },
+};
 
 export default function Home() {
+  const featured = essays.filter((essay) =>
+    [
+      "fda-shows-up",
+      "latin-america-trial-frontier",
+      "phase-one-failure-modes",
+    ].includes(essay.slug),
+  );
+
   return (
     <div className="mx-auto max-w-[68rem] px-6 md:px-10">
       {/* ── Wordmark + thesis ─────────────────────────── */}
@@ -36,61 +60,109 @@ export default function Home() {
 
       <hr className="rule" />
 
-      {/* ── Selected writing ──────────────────────────── */}
+      {/* ── Start here ───────────────────────────────── */}
+      <section className="py-14 md:py-20">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
+          <div className="md:col-span-3">
+            <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+              Start here
+            </h2>
+          </div>
+          <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
+            <p className="font-display text-[1.45rem] md:text-[2rem] leading-[1.16] tracking-[-0.018em] text-ink max-w-[28ch]">
+              New here? Read the map before you walk into the trial.
+            </p>
+            <p className="mt-4 text-ink-soft leading-relaxed max-w-[58ch]">
+              A short guide to the site, the recurring arguments, and the
+              essays that best explain why clinical-trial operations are where
+              so many biotech promises become real or fall apart.
+            </p>
+            <Link
+              href="/start-here"
+              className="mt-7 inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+            >
+              Begin there →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* ── Featured writing ─────────────────────────── */}
       <section className="py-16 md:py-24">
         <div className="grid md:grid-cols-12 gap-6 md:gap-10">
           <div className="md:col-span-3">
             <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-              Selected writing
+              Featured essays
             </h2>
             <p className="mt-3 font-mono text-[0.7rem] tracking-[0.06em] text-ink-mute oldstyle">
-              {String(essays.length).padStart(2, "0")} pieces · 2026 →
+              Chosen entry points
             </p>
             <p className="mt-6 font-display italic text-[1rem] text-ink-soft leading-snug max-w-[18ch]">
-              Field notes from the operational floor of the trial.
+              The pieces I would hand someone first.
             </p>
           </div>
           <ol className="md:col-span-9 list-none border-t border-rule-soft md:border-l md:border-t-0 md:pl-10">
-            {essays.map((essay, idx) => (
-              <li
-                key={essay.slug}
-                className="border-b border-rule-soft last:border-b-0"
-              >
-                <Link
-                  href={`/writing/${essay.slug}`}
-                  className="group block py-7 md:py-9 -mx-2 px-2 transition-colors hover:bg-paper-soft/40"
-                >
-                  <div className="flex items-baseline gap-5 md:gap-7">
-                    <span
-                      aria-hidden="true"
-                      className="font-mono text-[0.74rem] tracking-[0.06em] text-ink-mute oldstyle pt-2 select-none w-7 shrink-0"
-                    >
-                      {String(idx + 1).padStart(2, "0")}
-                    </span>
-                    <div className="flex-1">
-                      <h3 className="font-display text-[1.55rem] md:text-[1.95rem] leading-[1.05] tracking-[-0.02em] text-ink group-hover:text-terracotta transition-colors">
-                        {essay.title}
-                      </h3>
-                      <p className="mt-3 text-ink-soft leading-snug max-w-[52ch]">
-                        {essay.dek}
-                      </p>
-                      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-mute">
-                        <span className="oldstyle normal-case tracking-[0.04em]">
-                          {formatDateShort(essay.date)}
-                        </span>
-                        <span aria-hidden="true">·</span>
-                        <span>{essay.readingTime}</span>
-                        <span aria-hidden="true">·</span>
-                        <span className="text-terracotta/80">
-                          {essay.tags.slice(0, 2).join(" / ")}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </li>
+            {featured.map((essay, idx) => (
+              <EssayListItem key={essay.slug} essay={essay} index={idx} />
             ))}
           </ol>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* ── Browse by topic ──────────────────────────── */}
+      <section className="py-16 md:py-24">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
+          <div className="md:col-span-3">
+            <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+              Browse by topic
+            </h2>
+            <p className="mt-6 font-display italic text-[1rem] text-ink-soft leading-snug max-w-[18ch]">
+              A few shelves, not a maze.
+            </p>
+          </div>
+          <div className="md:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-8 md:border-l md:border-rule-soft md:pl-10">
+            {getTagEntries().map(([tag, meta]) => (
+              <Link
+                key={tag}
+                href={`/topics/${tag}`}
+                className="group border-t border-rule-soft pt-5"
+              >
+                <h3 className="font-display text-[1.35rem] leading-tight text-ink group-hover:text-terracotta transition-colors">
+                  {meta.label}
+                </h3>
+                <p className="mt-3 text-ink-soft leading-snug">{meta.dek}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* ── Archive doorway ──────────────────────────── */}
+      <section className="py-14 md:py-20">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
+          <div className="md:col-span-3">
+            <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+              Archive
+            </h2>
+          </div>
+          <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
+            <p className="text-ink-soft leading-relaxed max-w-[56ch]">
+              Prefer the whole shelf at once? The archive keeps every essay in
+              a quiet chronological list, grouped by year and easy to scan.
+            </p>
+            <Link
+              href="/archive"
+              className="mt-6 inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+            >
+              Open the archive →
+            </Link>
+          </div>
         </div>
       </section>
 

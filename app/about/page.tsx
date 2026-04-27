@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "Katalina Londoño — regulatory affairs coordinator at the University of Washington's heme-onc program, writing about clinical-trial operations and Latin American biotech.",
+  alternates: {
+    canonical: absoluteUrl("/about"),
+  },
 };
 
 const TIMELINE: { year: string; role: string; place: string; note?: string }[] =
@@ -54,7 +58,7 @@ export default function About() {
             San Francisco · Updated April 2026
           </p>
         </div>
-        <h1 className="md:col-span-9 font-display text-[2.4rem] md:text-[3.6rem] leading-[1.04] tracking-[-0.025em] text-ink">
+        <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
           A coordinator’s view of clinical trials, from the regulatory floor of
           an academic cancer center.
         </h1>
@@ -231,11 +235,51 @@ export default function About() {
 
       <hr className="rule" />
 
+      {/* ── Colophon ──────────────────────────────────── */}
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
+        <div className="md:col-span-3">
+          <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            §&nbsp;04 — Colophon
+          </p>
+        </div>
+        <div className="md:col-span-9 grid sm:grid-cols-3 gap-8">
+          <div className="border-t border-rule-soft pt-5">
+            <h3 className="font-display italic text-[1.2rem] text-ink">
+              Built with
+            </h3>
+            <p className="mt-3 text-ink-soft leading-snug">
+              Next.js, Bun, MDX, and a fondness for pages that feel typeset
+              instead of assembled.
+            </p>
+          </div>
+          <div className="border-t border-rule-soft pt-5">
+            <h3 className="font-display italic text-[1.2rem] text-ink">
+              Desk fuel
+            </h3>
+            <p className="mt-3 text-ink-soft leading-snug">
+              Coffee, annotated protocols, clinical acronyms, and the belief
+              that clean folders are a form of mercy.
+            </p>
+          </div>
+          <div className="border-t border-rule-soft pt-5">
+            <h3 className="font-display italic text-[1.2rem] text-ink">
+              House style
+            </h3>
+            <p className="mt-3 text-ink-soft leading-snug">
+              Warm paper, sharp serif, small sections, real dates, and no
+              pretending that operations are less interesting than strategy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
       {/* ── Contact ───────────────────────────────────── */}
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-20">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            §&nbsp;04 — In touch
+            §&nbsp;05 — In touch
           </p>
         </div>
         <div className="md:col-span-9 prose-essay max-w-none">

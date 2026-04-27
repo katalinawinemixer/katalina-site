@@ -1,10 +1,24 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { essays, formatDateShort } from "@/lib/essays";
+import {
+  essays,
+  formatDateShort,
+  getTagEntries,
+  getTagLabel,
+} from "@/lib/essays";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Writing",
   description: "Essays on clinical-trial operations and Latin American biotech.",
+  alternates: {
+    canonical: absoluteUrl("/writing"),
+  },
+  openGraph: {
+    title: "Writing",
+    description: "Essays on clinical-trial operations and Latin American biotech.",
+    url: absoluteUrl("/writing"),
+  },
 };
 
 export default function WritingIndex() {
@@ -19,11 +33,30 @@ export default function WritingIndex() {
             {String(essays.length).padStart(2, "0")} pieces
           </p>
         </div>
-        <h1 className="md:col-span-9 font-display text-[2.4rem] md:text-[3.4rem] leading-[1.04] tracking-[-0.025em] text-ink">
+        <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.4rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
           Field notes from the operational floor of the trial — and the
           regulatory edges where most early-phase therapies actually fail.
         </h1>
       </header>
+
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 mb-14 md:mb-20">
+        <div className="md:col-span-3">
+          <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            Topics
+          </h2>
+        </div>
+        <div className="md:col-span-9 flex flex-wrap gap-3">
+          {getTagEntries().map(([tag, meta]) => (
+            <Link
+              key={tag}
+              href={`/topics/${tag}`}
+              className="border border-rule-soft px-3 py-2 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-ink-soft hover:border-terracotta hover:text-terracotta transition-colors"
+            >
+              {meta.label}
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <ol className="list-none border-t border-rule">
         {essays.map((essay, idx) => (
@@ -45,7 +78,7 @@ export default function WritingIndex() {
                   </span>
                 </div>
                 <div className="md:col-span-9">
-                  <h2 className="font-display text-[1.7rem] md:text-[2.2rem] leading-[1.06] tracking-[-0.022em] text-ink group-hover:text-terracotta transition-colors">
+                  <h2 className="font-display text-[1.48rem] md:text-[2.2rem] leading-[1.1] md:leading-[1.06] tracking-[-0.018em] md:tracking-[-0.022em] text-ink group-hover:text-terracotta transition-colors">
                     {essay.title}
                   </h2>
                   <p className="mt-4 text-ink-soft leading-relaxed max-w-[58ch]">
@@ -54,7 +87,7 @@ export default function WritingIndex() {
                   <p className="mt-4 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-mute">
                     {essay.readingTime} ·{" "}
                     <span className="text-terracotta/80">
-                      {essay.tags.join(" / ")}
+                      {essay.tags.map(getTagLabel).join(" / ")}
                     </span>
                   </p>
                 </div>

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { READING } from "@/lib/reading";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Reading",
   description:
     "Books, papers, newsletters, and companies on the clinical-trial operations beat — annotated.",
+  alternates: {
+    canonical: absoluteUrl("/reading"),
+  },
 };
 
 export default function Reading() {
@@ -21,11 +25,11 @@ export default function Reading() {
           </p>
         </div>
         <div className="md:col-span-9">
-          <h1 className="font-display text-[2.4rem] md:text-[3.6rem] leading-[1.04] tracking-[-0.025em] text-ink">
+          <h1 className="font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
             A working bibliography for clinical-trial operations and Latin
             American biotech.
           </h1>
-          <p className="mt-6 font-display italic text-[1.2rem] leading-relaxed text-ink-soft max-w-[58ch]">
+          <p className="mt-6 font-display italic text-[1.05rem] md:text-[1.15rem] leading-relaxed text-ink-soft max-w-[58ch]">
             This is what I read, what I cite, and what I keep returning to. It
             is annotated for the same reason most lists aren&rsquo;t: the value
             of a reading list lives in the reasons, not the entries.
@@ -42,12 +46,12 @@ export default function Reading() {
                 <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
                   §&nbsp;{String(sIdx + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-2 font-display italic text-[1.5rem] md:text-[1.7rem] leading-tight text-ink">
+                <h2 className="mt-2 font-display italic text-[1.3rem] md:text-[1.7rem] leading-tight text-ink">
                   {section.heading}
                 </h2>
               </div>
               {section.description ? (
-                <p className="md:col-span-9 font-display italic text-[1.1rem] leading-relaxed text-ink-soft max-w-[60ch]">
+                <p className="md:col-span-9 font-display italic text-[1rem] md:text-[1.1rem] leading-relaxed text-ink-soft max-w-[60ch]">
                   {section.description}
                 </p>
               ) : null}

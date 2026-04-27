@@ -1,91 +1,109 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Now",
   description: "What I'm working on, reading, and thinking about this month.",
+  alternates: {
+    canonical: absoluteUrl("/now"),
+  },
 };
 
 const STANZAS: { lead: string; body: string }[] = [
   {
-    lead: "At work",
+    lead: "Main focus",
     body:
-      "Running regulatory ops for the heme-onc trial portfolio at UW. Q2 deviation reconciliation closes at the end of April; two protocol amendments are mid-IRB. One sponsor audit on the calendar for May.",
+      "Running regulatory ops for the heme-onc trial portfolio at UW while building a sharper public body of work around trial operations, LatAm biotech, and investor diligence from the coordinator's side of the table.",
   },
   {
-    lead: "Writing",
+    lead: "Writing desk",
     body:
-      "A longer piece on how the COFEPRIS reform is changing the cost structure for US biotechs running their Phase I/II trials in Mexico. Out in May, probably. Also a follow-up to the FDA-inspection essay, on the deviation reconciliation discipline specifically.",
+      "A longer piece on how COFEPRIS reform changes the cost structure for US biotechs running Phase I/II trials in Mexico. Also a follow-up to the FDA-inspection essay, this time on deviation reconciliation as a discipline rather than a cleanup task.",
   },
   {
-    lead: "Reading",
+    lead: "Reading stack",
     body:
-      "Mukherjee's Emperor of All Maladies — on the third re-read, this time with the chapters on Frei and Freireich slowed down. Galeano's Open Veins in the original, two chapters at a time. The ANVISA RDC updates from this spring.",
+      "Mukherjee's Emperor of All Maladies on a slow reread; Galeano's Open Veins in Spanish, two chapters at a time; ANVISA and COFEPRIS updates with the kind of attention other people reserve for playoff brackets.",
   },
   {
     lead: "Watching",
     body:
-      "ASCO 2026 abstracts as they come out. The COFEPRIS modernization throughput numbers. A handful of LatAm-anchored Series A biotechs whose names I will share if and when they raise.",
+      "ASCO 2026 abstracts, COFEPRIS modernization throughput numbers, and a handful of LatAm-anchored early-stage biotechs whose names I will share when there is something public to point to.",
   },
   {
     lead: "Open to",
     body:
-      "Conversations with US biotech investors who underwrite Phase I/II programs in oncology and want a second read on a sponsor's operational footing. Conversations with LatAm-focused funds (Kaszek, Monashees, Cometa, ALLVP, FEMSA, Hi) on cross-border bio dealflow. And introductions to anyone running a trial site in São Paulo, CDMX, or Bogotá whose work I should be paying attention to.",
+      "Conversations with biotech investors underwriting Phase I/II programs, LatAm-focused funds thinking about bio dealflow, and anyone running a trial site in São Paulo, CDMX, Bogotá, or Buenos Aires whose work I should understand.",
   },
   {
     lead: "In SF",
     body:
-      "I have moved here recently and I am building the part of my life that happens at small tables in unhurried neighborhoods. If you live in San Francisco — or come through often — and any of what I write here resonates with what you are working on, I would genuinely like to meet you for coffee. I take that ask seriously and I will not waste your hour.",
-  },
-  {
-    lead: "Reachable",
-    body:
-      "Email at Katalina@katalinalondono.com — I read every one. Twitter as @kat_winemixer, where I post less than I read but where I am responsive to DMs from people who have read something here. LinkedIn for the formal version of my background.",
+      "Still building the part of my life that happens at small tables in unhurried neighborhoods. If you live here, work around biotech, clinical operations, or LatAm investing, and something here resonates, I would genuinely like to meet for coffee.",
   },
 ];
 
-export default function Now() {
-  const today = new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+const CURRENTLY = [
+  ["Base", "San Francisco"],
+  ["Book", "The Emperor of All Maladies"],
+  ["Tab", "ASCO 2026 abstracts"],
+  ["Question", "Where does LatAm trial capacity become investable infrastructure?"],
+];
 
+export default function Now() {
   return (
-    <div className="mx-auto max-w-[60rem] px-6 md:px-10 py-16 md:py-28">
+    <div className="mx-auto max-w-[68rem] px-6 md:px-10 py-16 md:py-24">
       {/* ── Header ────────────────────────────────────── */}
-      <header className="mb-14 md:mb-20">
-        <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-          Now
-        </p>
-        <p className="mt-3 font-mono text-[0.72rem] tracking-[0.04em] text-ink-mute oldstyle normal-case">
-          {today} · San Francisco
-        </p>
+      <header className="grid md:grid-cols-12 gap-6 md:gap-10 mb-14 md:mb-20">
+        <div className="md:col-span-3">
+          <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            Now
+          </p>
+          <p className="mt-3 font-mono text-[0.72rem] tracking-[0.04em] text-ink-mute oldstyle normal-case">
+            Updated April 2026 · San Francisco
+          </p>
+        </div>
+        <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.4rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
+          A dated note from the current version of the desk.
+        </h1>
       </header>
 
-      {/* ── Letter-style stanzas ──────────────────────── */}
-      <div className="font-display italic text-[1.5rem] md:text-[1.85rem] leading-[1.35] tracking-[-0.012em] text-ink mb-14 md:mb-20">
-        <p>
-          A short, dated note from where I am right now &mdash; what I am
-          working on, what I am reading, and what kinds of conversations I
-          would welcome.
-        </p>
-      </div>
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-24">
+        <div className="md:col-span-3">
+          <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            Currently
+          </p>
+        </div>
+        <dl className="md:col-span-9 grid sm:grid-cols-2 gap-x-10 gap-y-6 border-t border-rule">
+          {CURRENTLY.map(([label, value]) => (
+            <div key={label} className="pt-5">
+              <dt className="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-mute">
+                {label}
+              </dt>
+              <dd className="mt-2 font-display text-[1.25rem] leading-tight text-ink">
+                {value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
-      <ol className="list-none space-y-10 md:space-y-14 border-t border-rule">
+      <hr className="rule" />
+
+      <ol className="list-none">
         {STANZAS.map((stanza, idx) => (
           <li
             key={stanza.lead}
-            className="grid grid-cols-[5rem_1fr] md:grid-cols-[7rem_1fr] gap-5 md:gap-10 pt-10 md:pt-14"
+            className="grid md:grid-cols-12 gap-6 md:gap-10 py-10 md:py-14 border-b border-rule-soft"
           >
-            <div className="font-mono text-[0.74rem] uppercase tracking-[0.1em] text-ink-mute oldstyle pt-2">
+            <div className="md:col-span-3 font-mono text-[0.74rem] uppercase tracking-[0.1em] text-ink-mute oldstyle">
               <span className="text-terracotta">
-                §&nbsp;{String(idx + 1).padStart(2, "0")}
+                § {String(idx + 1).padStart(2, "0")}
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em] text-ink-soft">
                 {stanza.lead}
               </span>
             </div>
-            <p className="text-[1.1rem] leading-[1.65] text-ink max-w-[60ch]">
+            <p className="md:col-span-9 text-[1.08rem] leading-[1.65] text-ink max-w-[62ch]">
               {stanza.body}
             </p>
           </li>
@@ -94,18 +112,19 @@ export default function Now() {
 
       <hr className="rule mt-20 md:mt-28" />
 
-      <p className="mt-10 font-display italic text-[1.05rem] leading-relaxed text-ink-soft">
-        This page is updated when something I want to be on it changes &mdash;
-        usually monthly, sometimes after a quarter goes by without a note. The{" "}
-        <a
-          href="https://nownownow.com/about"
-          className="text-clinical hover:text-terracotta underline-offset-[3px] underline decoration-1 decoration-clinical/40 hover:decoration-terracotta transition-colors"
-        >
-          /now page
-        </a>{" "}
-        convention comes from Derek Sivers. I have kept his idea but not his
-        formatting.
-      </p>
+      <div className="grid md:grid-cols-12 gap-6 md:gap-10 mt-10">
+        <p className="md:col-span-9 md:col-start-4 font-display italic text-[1.05rem] leading-relaxed text-ink-soft">
+          This page changes when the actual shape of the month changes. The{" "}
+          <a
+            href="https://nownownow.com/about"
+            className="text-clinical hover:text-terracotta underline-offset-[3px] underline decoration-1 decoration-clinical/40 hover:decoration-terracotta transition-colors"
+          >
+            /now page
+          </a>{" "}
+          convention comes from Derek Sivers. I kept the spirit and let the
+          formatting wear better shoes.
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
-import { Fraunces, Newsreader, JetBrains_Mono } from "next/font/google";
+import {
+  Alegreya,
+  Source_Serif_4,
+  Newsreader,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
-  axes: ["SOFT", "WONK", "opsz"],
+  axes: ["opsz"],
+  display: "swap",
+});
+
+const wordmark = Alegreya({
+  variable: "--font-wordmark",
+  subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -25,25 +38,32 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://katalinalondono.com"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Katalina Londoño",
-    template: "%s · Katalina Londoño",
+    default: siteConfig.name,
+    template: `%s · ${siteConfig.name}`,
   },
-  description:
-    "Notes on clinical-trial operations, Latin American biotech, and the regulatory edges where early-phase therapies actually fail.",
+  description: siteConfig.description,
+  authors: [{ name: siteConfig.author, url: siteConfig.url }],
+  creator: siteConfig.author,
+  publisher: siteConfig.author,
+  alternates: {
+    types: {
+      "application/rss+xml": absoluteUrl("/rss.xml"),
+    },
+  },
   openGraph: {
-    title: "Katalina Londoño",
-    description:
-      "Clinical-trial operations, Latin American biotech, regulatory edges.",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     type: "website",
-    locale: "en_US",
+    locale: siteConfig.locale,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Katalina Londoño",
-    description:
-      "Clinical-trial operations, Latin American biotech, regulatory edges.",
+    title: siteConfig.name,
+    description: siteConfig.description,
   },
 };
 
@@ -53,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
+      className={`${sourceSerif.variable} ${wordmark.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen bg-paper text-ink flex flex-col">
         <SiteHeader />

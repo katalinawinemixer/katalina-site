@@ -1,10 +1,35 @@
+export const tagMeta = {
+  operator: {
+    label: "Operator notes",
+    dek: "What breaks inside actual trial operations: documents, deviations, audits, timelines, and the work behind clean data.",
+  },
+  thesis: {
+    label: "Investment theses",
+    dek: "Arguments about where biotech, clinical infrastructure, and capital might be moving next.",
+  },
+  regulatory: {
+    label: "Regulatory edge",
+    dek: "FDA, COFEPRIS, ANVISA, IRBs, eTMFs, and the paperwork layer that quietly determines whether trials move.",
+  },
+  latam: {
+    label: "Latin America",
+    dek: "Cross-border biotech, trial sites, founder geography, and the market most US readers still underestimate.",
+  },
+  diligence: {
+    label: "Diligence",
+    dek: "Questions investors should ask when the polished memo misses the operational reality.",
+  },
+} as const;
+
+export type EssayTag = keyof typeof tagMeta;
+
 export type EssayMeta = {
   slug: string;
   title: string;
   dek: string;
   date: string; // YYYY-MM-DD
   readingTime: string; // e.g., "12 min"
-  tags: ("operator" | "thesis" | "regulatory" | "latam" | "diligence")[];
+  tags: EssayTag[];
 };
 
 export const essays: EssayMeta[] = [
@@ -61,6 +86,18 @@ export const essays: EssayMeta[] = [
 
 export function getEssay(slug: string): EssayMeta | undefined {
   return essays.find((e) => e.slug === slug);
+}
+
+export function getEssaysByTag(tag: EssayTag): EssayMeta[] {
+  return essays.filter((essay) => essay.tags.includes(tag));
+}
+
+export function getTagEntries() {
+  return Object.entries(tagMeta) as [EssayTag, (typeof tagMeta)[EssayTag]][];
+}
+
+export function getTagLabel(tag: EssayTag): string {
+  return tagMeta[tag].label;
 }
 
 export function formatDate(iso: string): string {
