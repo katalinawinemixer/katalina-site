@@ -17,70 +17,70 @@ export const READING: ReadingSection[] = [
   {
     heading: "Currently reading",
     description:
-      "The live stack: books I am reading now because they sharpen the investor side of the clinical-operations thesis.",
+      "What is open now, usually with too many tabs beside it.",
     entries: [
       {
         title: "Venture Deals",
         author: "Brad Feld, Jason Mendelson",
         year: "2019",
         note:
-          "The mechanics book. Term sheets, liquidation preferences, option pools, lead investors, syndicates, and all the vocabulary I want to be fluent in before I am across the table from founders.",
+          "The mechanics book. Term sheets, liquidation preferences, option pools, lead investors, syndicates, and the vocabulary that should feel ordinary rather than mystical.",
       },
     ],
   },
   {
-    heading: "VC to read next",
+    heading: "To read",
     description:
-      "A focused associate-track shelf: deal mechanics, fund math, power laws, strategy, markets, and biotech valuation.",
+      "A short shelf for getting sharper about how young companies are financed, judged, and built.",
     entries: [
       {
         title: "Secrets of Sand Hill Road",
         author: "Scott Kupor",
         year: "2019",
         note:
-          "For the psychology of the venture room: how investors think about categories, founders, boards, down rounds, and exits once the legal mechanics are no longer mysterious.",
+          "How venture looks from inside the firm: categories, founders, boards, down rounds, exits, and the parts of the job that do not show up in a term sheet.",
       },
       {
         title: "The Business of Venture Capital",
         author: "Mahendra Ramsinghani",
         year: "2021",
         note:
-          "The firm-level view. Useful for understanding LPs, fund formation, portfolio construction, reserves, value creation, and why a good deal can still be a bad fund decision.",
+          "The firm-level view: LPs, fund formation, portfolio construction, reserves, and why a good company can still be a hard fit for a fund.",
       },
       {
         title: "The Power Law",
         author: "Sebastian Mallaby",
         year: "2022",
         note:
-          "The history and math of why venture behaves unlike normal finance: most bets fail, a few return the fund, and the job is organized around spotting non-obvious outliers early.",
+          "A history of why venture behaves unlike normal finance: most bets fail, a few return the fund, and the incentives get strange from there.",
       },
       {
         title: "7 Powers",
         author: "Hamilton Helmer",
         year: "2016",
         note:
-          "The strategy language I want for investment memos: scale economies, network effects, counter-positioning, switching costs, brand, cornered resources, and process power.",
+          "A compact strategy grammar: scale economies, network effects, counter-positioning, switching costs, brand, cornered resources, and process power.",
       },
       {
         title: "Crossing the Chasm",
         author: "Geoffrey A. Moore",
         year: "1991",
         note:
-          "Still the cleanest way to think about why technically good products stall between early believers and mainstream buyers. Especially relevant for healthtech and clinical-trial software.",
+          "Still the cleanest way to think about why technically good products stall between early believers and mainstream buyers.",
       },
       {
         title: "The Cold Start Problem",
         author: "Andrew Chen",
         year: "2021",
         note:
-          "For software and marketplace pattern recognition: when network effects are real, when they are wishful thinking, and how early liquidity actually gets created.",
+          "Network effects without the halo: when they are real, when they are wishful thinking, and how early liquidity actually gets created.",
       },
       {
         title: "The Pharmagellan Guide to Biotech Forecasting and Valuation",
         author: "Frank S. David, Seth Robey, Andrew Matthews",
         year: "2017",
         note:
-          "The most directly useful biotech-investor addition: how to think about R&D-stage assets, clinical assumptions, market share, development cost, and valuation without hand-waving.",
+          "For the biotech-specific math: R&D-stage assets, clinical assumptions, market share, development cost, and valuation without hand-waving.",
       },
     ],
   },
