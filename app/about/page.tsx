@@ -25,10 +25,10 @@ const PATH: { year: string; title: string; body: string }[] =
         "Before that I coordinated early-phase trials in Orlando. I learned the patient-facing version of the work: eligibility, consent, source data, queries, and the very practical difference between a protocol that looks clean and one a site can actually run.",
     },
     {
-      year: "2022–23",
+      year: "2020–23",
       title: "The lab floor",
       body:
-        "The first place clinical operations made sense to me was the lab. Pharmacokinetic samples, shipment windows, labels, handoffs, and all the small process failures that become big data problems if nobody designs a better system.",
+        "The first place clinical operations made sense to me was the lab. I started with COVID sample processing and PCR analysis, then moved into pharmacokinetic samples, PBMC processing, whole-blood RNA sequencing, shipment windows, labels, handoffs, and all the small process failures that become big data problems if nobody designs a better system.",
     },
   ];
 
