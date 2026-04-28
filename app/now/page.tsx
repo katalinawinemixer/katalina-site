@@ -89,7 +89,7 @@ export default function Now() {
           </dl>
           <figure className="order-first w-full max-w-[18rem] overflow-hidden border border-rule justify-self-start lg:order-none lg:justify-self-end">
             <Image
-              src="/images/now-katalina.jpeg"
+              src="/images/now-katalina-apr-2026.jpeg"
               alt="Katalina Londoño"
               width={300}
               height={450}
