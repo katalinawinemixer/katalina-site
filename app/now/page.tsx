@@ -91,8 +91,8 @@ export default function Now() {
             <Image
               src="/images/now-katalina.jpeg"
               alt="Katalina Londoño"
-              width={360}
-              height={540}
+              width={300}
+              height={450}
               unoptimized
               priority
               sizes="(min-width: 768px) 16rem, 80vw"
