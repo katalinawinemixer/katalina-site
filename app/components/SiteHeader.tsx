@@ -25,7 +25,7 @@ export default function SiteHeader() {
           <span aria-hidden="true" className="text-terracotta">§</span>
           <span className="header-wordmark">Katalina Londoño</span>
         </Link>
-        <nav className="order-last flex w-full flex-wrap items-center justify-start gap-x-5 gap-y-3 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-soft sm:order-none sm:w-auto sm:gap-x-6 sm:text-[0.74rem]">
+        <nav className="order-last flex w-full flex-nowrap items-center justify-start gap-x-4 overflow-x-auto whitespace-nowrap pb-1 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-ink-soft [scrollbar-width:none] sm:order-none sm:w-auto sm:flex-wrap sm:gap-x-6 sm:overflow-visible sm:pb-0 sm:text-[0.74rem] sm:tracking-[0.12em] [&::-webkit-scrollbar]:hidden">
           {NAV.map((item) => {
             const isActive =
               pathname === item.href || pathname.startsWith(`${item.href}/`);
