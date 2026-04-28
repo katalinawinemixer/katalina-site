@@ -9,8 +9,12 @@ type Env = {
 const worker = {
   fetch(request: Request, env: Env): Promise<Response> | Response {
     const url = new URL(request.url);
+    const forwardedProto = request.headers.get("x-forwarded-proto");
+    const cfVisitor = request.headers.get("cf-visitor") ?? "";
+    const visitorUsedHttp =
+      forwardedProto === "http" || cfVisitor.includes('"scheme":"http"');
 
-    if (url.protocol === "http:") {
+    if (url.protocol === "http:" || visitorUsedHttp) {
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
