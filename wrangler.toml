@@ -1,4 +1,5 @@
 name = "katalina-site"
+main = "src/worker.ts"
 compatibility_date = "2026-04-27"
 
 [assets]
