@@ -91,12 +91,12 @@ export default function Now() {
             <Image
               src="/images/now-katalina.jpeg"
               alt="Katalina Londoño"
-              width={534}
-              height={800}
+              width={480}
+              height={720}
               unoptimized
               priority
               sizes="(min-width: 768px) 16rem, 80vw"
-              className="aspect-[2/3] w-full scale-[1.18] object-cover object-[54%_44%]"
+              className="aspect-[2/3] w-full object-cover object-center"
             />
           </figure>
         </div>
