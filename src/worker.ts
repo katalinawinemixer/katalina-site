@@ -19,6 +19,11 @@ const worker = {
       return Response.redirect(url.toString(), 301);
     }
 
+    if (url.hostname === "katalinalondono.com") {
+      url.hostname = "www.katalinalondono.com";
+      return Response.redirect(url.toString(), 301);
+    }
+
     return env.ASSETS.fetch(request);
   },
 };
