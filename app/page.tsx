@@ -256,6 +256,19 @@ export default function Home() {
               </a>
             </li>
             <li>
+              <a
+                href="https://github.com/katalinawinemixer"
+                className="group inline-flex items-baseline gap-4 font-display text-[1.4rem] md:text-[1.6rem] text-ink hover:text-terracotta transition-colors"
+              >
+                <span className="underline-offset-[6px] group-hover:underline decoration-1 decoration-terracotta/60">
+                  GitHub
+                </span>
+                <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink-mute normal-case">
+                  → @katalinawinemixer
+                </span>
+              </a>
+            </li>
+            <li>
               <Link
                 href="/reading"
                 className="group inline-flex items-baseline gap-4 font-display text-[1.4rem] md:text-[1.6rem] text-ink hover:text-terracotta transition-colors"
