@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KatalinaLondono.com
 
-## Getting Started
+Personal website for Katalina Londoño, focused on clinical-trial operations, Latin American biotech, and the regulatory edges where early-phase therapies actually fail.
 
-First, run the development server:
+The site is meant to work as both a public writing home and a career artifact: it shows a point of view from inside clinical research operations, with essays that can be shared with founders, investors, operators, and hiring managers.
+
+## What It Contains
+
+- A homepage with current focus areas and featured essays.
+- A `/start-here` path for new readers.
+- A `/venture` page for biotech and venture readers.
+- A `/now` page for current work and reading.
+- An essay archive powered by MDX content.
+- Topic pages, RSS, sitemap, robots metadata, favicons, and Cloudflare headers.
+
+## Project Structure
+
+```text
+app/              Next.js App Router pages, layouts, metadata, and site components
+content/essays/   MDX essays published on the site
+lib/              Essay loading, reading metadata, and site configuration helpers
+public/           Favicons, static images, and Cloudflare header rules
+src/              Cloudflare Worker entrypoint
+```
+
+## Run Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site usually runs at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content Workflow
 
-## Learn More
+Add essays as MDX files in `content/essays/`. Shared site metadata lives in `lib/site.ts`; essay parsing and topic helpers live in `lib/essays.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+## Verification
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- Next.js 16
+- React 19
+- TypeScript
+- MDX
+- Tailwind CSS v4
+- Cloudflare Workers / Pages configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is the active public website repo. The old default Next.js README has been replaced with project-specific structure, run, and content notes so the GitHub repo now reads like the site it actually is.
