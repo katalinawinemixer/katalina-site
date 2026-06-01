@@ -74,8 +74,9 @@ export default function Home() {
             </h2>
           </div>
           <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
-            <ul className="grid sm:grid-cols-3 gap-6">
+            <ul className="grid sm:grid-cols-4 gap-6">
               {[
+                "AI-native software projects",
                 "Clinical-trial operations",
                 "Latin America as trial infrastructure",
                 "How investors should diligence execution risk",
@@ -87,12 +88,20 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/venture"
-              className="mt-8 inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
-            >
-              For biotech and venture readers →
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              <Link
+                href="/software"
+                className="inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+              >
+                For software and product readers →
+              </Link>
+              <Link
+                href="/venture"
+                className="inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+              >
+                For biotech and venture readers →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
