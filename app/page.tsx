@@ -49,14 +49,14 @@ export default function Home() {
               <span className="block mt-1 normal-case tracking-[0.04em]">
                 Reading:{" "}
                 <em className="font-display not-italic text-ink">
-                  Venture Deals
+                  Cracking the Coding Interview
                 </em>
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em]">
-                Following: ASCO 2026 abstracts
+                Following: DDIA → secure systems
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em]">
-                Working on: trial ops + LatAm biotech diligence
+                Working on: AI-native clinical workflow tools
               </span>
             </p>
           </div>

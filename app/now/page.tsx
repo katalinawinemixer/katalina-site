@@ -14,27 +14,27 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "Running regulatory ops for the heme-onc trial portfolio at UW and writing more clearly about trial operations, LatAm biotech, and what execution risk looks like from inside the site.",
+      "Building toward product, software, AI, and solutions engineering roles by turning clinical/regulatory workflow pain into AI-native tools for trial operations, evidence review, and human-in-the-loop systems.",
   },
   {
     lead: "Writing desk",
     body:
-      "Drafting a piece on how COFEPRIS reform changes the cost of running Phase I/II trials in Mexico, plus a follow-up to the FDA-inspection essay on deviation reconciliation.",
+      "Sharpening project case studies and software-facing writing around StudyChaser, the Human-AI Design System, SF Food Guesser, and the clinical-trial software stack.",
   },
   {
     lead: "Reading stack",
     body:
-      "Venture Deals for the mechanics of startup financing, The Emperor of All Maladies on a slow reread, Open Veins in Spanish, and ANVISA/COFEPRIS updates as they come out.",
+      "Cracking the Coding Interview for implementation practice, followed by Designing Data-Intensive Applications and Building Secure and Reliable Systems for stronger systems thinking.",
   },
   {
     lead: "Following",
     body:
-      "ASCO 2026 abstracts, COFEPRIS modernization updates, and regulatory changes that affect where early-phase oncology trials can actually run.",
+      "Product engineering, applied AI interfaces, clinical workflow automation, and the teams building tools where domain fluency and technical execution both matter.",
   },
   {
     lead: "Open to",
     body:
-      "Conversations with biotech investors underwriting Phase I/II programs, LatAm-focused funds thinking about bio dealflow, and trial-site operators in São Paulo, CDMX, Bogotá, or Buenos Aires.",
+      "Product engineering, software engineering, applied AI, solutions engineering, and forward-deployed engineering conversations where fast shipping, product judgment, and regulated-workflow fluency matter.",
   },
   {
     lead: "In SF",
@@ -45,9 +45,9 @@ const STANZAS: { lead: string; body: string }[] = [
 
 const CURRENTLY = [
   ["Base", "San Francisco"],
-  ["Book", "Venture Deals"],
-  ["Following", "ASCO 2026 abstracts"],
-  ["Question", "Where does LatAm trial capacity become investable infrastructure?"],
+  ["Book", "Cracking the Coding Interview"],
+  ["Following", "DDIA → secure systems"],
+  ["Question", "How do clinical workflows become trustworthy AI-native tools?"],
 ];
 
 export default function Now() {

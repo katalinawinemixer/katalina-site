@@ -18,11 +18,11 @@ export const READING: ReadingSection[] = [
     heading: "Currently reading",
     entries: [
       {
-        title: "Venture Deals",
-        author: "Brad Feld, Jason Mendelson",
-        year: "2019",
+        title: "Cracking the Coding Interview",
+        author: "Gayle Laakmann McDowell",
+        year: "2015",
         note:
-          "A practical book on how startup financing works: term sheets, lead investors, option pools, liquidation preferences, and the language people use when they talk about venture deals.",
+          "Open for implementation practice: data structures, algorithms, tradeoffs, and the syntax fluency I am building alongside shipped product work.",
       },
     ],
   },
@@ -30,53 +30,18 @@ export const READING: ReadingSection[] = [
     heading: "To read",
     entries: [
       {
-        title: "Secrets of Sand Hill Road",
-        author: "Scott Kupor",
-        year: "2019",
-        note:
-          "A plain-English view of how venture firms think about founders, markets, boards, down rounds, and exits.",
-      },
-      {
-        title: "The Business of Venture Capital",
-        author: "Mahendra Ramsinghani",
-        year: "2021",
-        note:
-          "A deeper look at how VC funds work: LPs, fund formation, portfolio construction, reserves, and what happens after the check is written.",
-      },
-      {
-        title: "The Power Law",
-        author: "Sebastian Mallaby",
-        year: "2022",
-        note:
-          "A history of venture capital and why the whole industry is built around a small number of huge wins.",
-      },
-      {
-        title: "7 Powers",
-        author: "Hamilton Helmer",
-        year: "2016",
-        note:
-          "A strategy book about why some companies become hard to compete with.",
-      },
-      {
-        title: "Crossing the Chasm",
-        author: "Geoffrey A. Moore",
-        year: "1991",
-        note:
-          "A book about why good products can still get stuck before they reach mainstream customers.",
-      },
-      {
-        title: "The Cold Start Problem",
-        author: "Andrew Chen",
-        year: "2021",
-        note:
-          "A book about network effects: when they are real, when they are not, and how early users start to build momentum.",
-      },
-      {
-        title: "The Pharmagellan Guide to Biotech Forecasting and Valuation",
-        author: "Frank S. David, Seth Robey, Andrew Matthews",
+        title: "Designing Data-Intensive Applications",
+        author: "Martin Kleppmann",
         year: "2017",
         note:
-          "A biotech-specific book on forecasting, clinical assumptions, market size, development costs, and valuation.",
+          "Next for systems thinking: storage, data models, distributed systems, reliability, and the architecture choices behind products that need to be trusted.",
+      },
+      {
+        title: "Building Secure and Reliable Systems",
+        author: "Heather Adkins, Betsy Beyer, Paul Blankinship, Piotr Lewandowski, Ana Oprea, Adam Stubblefield",
+        year: "2020",
+        note:
+          "A practical bridge between security and reliability: designing systems that handle failure, access, privacy, operational risk, and recovery deliberately.",
       },
     ],
   },
