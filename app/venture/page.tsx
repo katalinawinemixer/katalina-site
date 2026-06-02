@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Venture",
   description:
-    "A short map for biotech investors and operators reading Katalina Londoño's work on clinical-trial operations, LatAm biotech, and early-stage diligence.",
+    "A short map for biotech investors and biotech readers following Katalina Londoño's work on clinical-trial operations, LatAm biotech, and early-stage diligence.",
   alternates: {
     canonical: absoluteUrl("/venture"),
   },
@@ -38,7 +38,7 @@ export default function Venture() {
             Venture
           </p>
           <p className="mt-3 font-mono text-[0.7rem] tracking-[0.06em] text-ink-mute oldstyle">
-            For biotech investors and operators
+            For biotech investors and biotech readers
           </p>
         </div>
         <div className="md:col-span-9">

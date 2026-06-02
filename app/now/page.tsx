@@ -14,12 +14,12 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "Building toward product, software, AI, and solutions engineering roles by turning clinical/regulatory workflow pain into AI-native tools for trial operations, evidence review, and human-in-the-loop systems.",
+      "Grounding my job search in clinical research regulatory affairs while using GitHub to document hands-on technical learning and prototypes around trial training, evidence review, and human-in-the-loop systems.",
   },
   {
     lead: "Writing desk",
     body:
-      "Sharpening project case studies and software-facing writing around StudyChaser, the Human-AI Design System, SF Food Guesser, and the clinical-trial software stack.",
+      "Sharpening project case studies and GitHub-facing writing around StudyChaser, the Human-AI Design System, SF Food Guesser, and the clinical-trial software stack.",
   },
   {
     lead: "Reading stack",
@@ -29,12 +29,12 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Following",
     body:
-      "Product engineering, applied AI interfaces, clinical workflow automation, and the teams building tools where domain fluency and technical execution both matter.",
+      "Clinical workflow automation, applied AI interfaces, implementation teams, and healthtech groups where domain fluency and practical tooling judgment both matter.",
   },
   {
     lead: "Open to",
     body:
-      "Product engineering, software engineering, applied AI, solutions engineering, and forward-deployed engineering conversations where fast shipping, product judgment, and regulated-workflow fluency matter.",
+      "Healthtech, clinical AI, regulatory/compliance automation, implementation, solutions, and product-adjacent conversations where regulated-workflow fluency matters.",
   },
   {
     lead: "In SF",
@@ -47,7 +47,7 @@ const CURRENTLY = [
   ["Base", "San Francisco"],
   ["Book", "Cracking the Coding Interview"],
   ["Following", "DDIA → secure systems"],
-  ["Question", "How do clinical workflows become trustworthy AI-native tools?"],
+  ["Question", "How do clinical workflows become trustworthy AI-assisted tools?"],
 ];
 
 export default function Now() {

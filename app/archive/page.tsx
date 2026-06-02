@@ -28,7 +28,7 @@ const grouped = essays.reduce<Record<string, typeof essays>>((acc, essay) => {
 }, {});
 
 const themeGroups: { label: string; tag: EssayTag }[] = [
-  { label: "Clinical operations", tag: "operator" },
+  { label: "Trial operations", tag: "trialops" },
   { label: "LatAm biotech", tag: "latam" },
   { label: "Regulatory", tag: "regulatory" },
   { label: "Diligence", tag: "diligence" },

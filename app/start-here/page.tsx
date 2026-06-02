@@ -99,7 +99,7 @@ export default function StartHere() {
           </p>
           <p>
             I also made a short <Link href="/venture">venture map</Link> for
-            investors and operators who want the fastest version of the thesis.
+            investors and biotech readers who want the fastest version of the thesis.
           </p>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function StartHere() {
               Venture
             </h2>
             <p className="mt-3 text-ink-soft leading-snug">
-              The clearest map for biotech investors and operators.
+              The clearest map for biotech investors and biotech readers.
             </p>
           </Link>
           <Link href="/writing" className="group border-t border-rule-soft pt-5">

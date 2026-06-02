@@ -56,7 +56,7 @@ export default function Home() {
                 Following: DDIA → secure systems
               </span>
               <span className="block mt-1 normal-case tracking-[0.04em]">
-                Working on: AI-native clinical workflow tools
+                Working on: clinical workflow prototypes
               </span>
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
             <ul className="grid sm:grid-cols-4 gap-6">
               {[
-                "AI-native software projects",
+                "GitHub prototypes and technical learning",
                 "Clinical-trial operations",
                 "Latin America as trial infrastructure",
                 "How investors should diligence execution risk",
@@ -93,7 +93,7 @@ export default function Home() {
                 href="/software"
                 className="inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
               >
-                For software and product readers →
+                For project and GitHub readers →
               </Link>
               <Link
                 href="/venture"

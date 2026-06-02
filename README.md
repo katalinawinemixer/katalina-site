@@ -2,7 +2,7 @@
 
 Personal website for Katalina Londoño, focused on clinical-trial operations, Latin American biotech, and the regulatory edges where early-phase therapies actually fail.
 
-The site is meant to work as both a public writing home and a career artifact: it shows a point of view from inside clinical research operations, with essays that can be shared with founders, investors, operators, and hiring managers.
+The site is meant to work as both a public writing home and a career artifact: it shows a point of view from inside clinical research and regulatory affairs, with essays that can be shared with founders, investors, domain experts, and hiring managers.
 
 ## What It Contains
 

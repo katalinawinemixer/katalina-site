@@ -1,6 +1,6 @@
 export const tagMeta = {
-  operator: {
-    label: "Operator notes",
+  trialops: {
+    label: "Trial operations",
     dek: "What breaks inside actual trial operations: documents, deviations, audits, timelines, and the work behind clean data.",
   },
   thesis: {
@@ -44,7 +44,7 @@ export const essays: EssayMeta[] = [
       "Most diligence treats trial operations as execution detail. That is where timelines slip, clean data gets expensive, and the real company shows up.",
     date: "2026-04-27",
     readingTime: "10 min",
-    tags: ["diligence", "operator"],
+    tags: ["diligence", "trialops"],
   },
   {
     slug: "diligencing-phase-one-two-biotech",
@@ -53,7 +53,7 @@ export const essays: EssayMeta[] = [
       "The questions I would ask before underwriting an early clinical program: enrollment, site quality, protocol friction, regulatory discipline, and whether the team knows what breaks first.",
     date: "2026-04-24",
     readingTime: "11 min",
-    tags: ["diligence", "thesis", "operator"],
+    tags: ["diligence", "thesis", "trialops"],
   },
   {
     slug: "clinical-trial-software-stack",
@@ -63,7 +63,7 @@ export const essays: EssayMeta[] = [
       "Veeva, Florence, OnCore, Medidata, PreClarus, SIP. What the tools promise, what they actually do, and why implementation matters more than the demo.",
     date: "2026-04-20",
     readingTime: "9 min",
-    tags: ["operator", "diligence", "software"],
+    tags: ["trialops", "diligence", "software"],
   },
   {
     slug: "fda-shows-up",
@@ -73,7 +73,7 @@ export const essays: EssayMeta[] = [
       "Two thousand pages. Three days. Zero critical findings. What inspectors actually look for, and the document hygiene that makes an inspection boring instead of fatal.",
     date: "2026-04-12",
     readingTime: "12 min",
-    tags: ["operator", "regulatory"],
+    tags: ["trialops", "regulatory"],
   },
   {
     slug: "latin-america-trial-frontier",
@@ -92,7 +92,7 @@ export const essays: EssayMeta[] = [
       "Not the molecule. Not the protocol. Eight operational failure modes I’ve watched repeat across neurology, oncology, ID, and respiratory — and the questions they should make any biotech investor ask.",
     date: "2026-02-14",
     readingTime: "15 min",
-    tags: ["operator", "diligence"],
+    tags: ["trialops", "diligence"],
   },
   {
     slug: "bilingual-diligence",

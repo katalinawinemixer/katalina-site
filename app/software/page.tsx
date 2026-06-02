@@ -4,16 +4,16 @@ import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Software Projects",
+  title: "Projects / GitHub",
   description:
-    "Software and AI projects by Katalina Londoño: clinical-trial operations tools, human-AI review patterns, and privacy-aware applied AI demos.",
+    "GitHub projects by Katalina Londoño: clinical-trial workflow prototypes, human-AI review patterns, and privacy-aware applied AI demos.",
   alternates: {
     canonical: absoluteUrl("/software"),
   },
   openGraph: {
-    title: "Software Projects — Katalina Londoño",
+    title: "Projects / GitHub — Katalina Londoño",
     description:
-      "Clinical research and regulatory affairs operator building software for trial operations, evidence review, and human-in-the-loop AI workflows.",
+      "Clinical research regulatory affairs professional using GitHub to document technical learning and prototypes around trial workflows, evidence review, and human-in-the-loop AI.",
     url: absoluteUrl("/software"),
   },
 };
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 const PROJECTS = [
   {
     name: "StudyChaser",
-    eyebrow: "Clinical / regulatory operations",
+    eyebrow: "Clinical research / regulatory affairs",
     summary:
-      "A read-only regulatory training tracker for clinical research teams, built around protocol/amendment training, overdue acknowledgments, coordinator follow-up, and audit-ready filing notes.",
+      "A read-only regulatory training follow-up prototype for clinical research teams, built around protocol/amendment training, overdue acknowledgments, coordinator follow-up, and audit-ready filing notes.",
     why:
-      "This is the strongest bridge between my clinical/regulatory background and software: it turns a workflow I know from the inside into a product surface a study team could actually use.",
+      "This is the clearest bridge between my clinical/regulatory background and my technical learning: it turns a workflow I know from the inside into a product surface a study team could review.",
     stack: ["React", "Vite", "Node.js", "Cloudflare Workers", "Synthetic demo data"],
     image: "/images/projects/studychaser-dashboard.png",
     alt: "StudyChaser dashboard with synthetic training counts and overdue follow-up items",
@@ -36,9 +36,9 @@ const PROJECTS = [
     name: "Human-AI Design System",
     eyebrow: "AI product patterns",
     summary:
-      "A React/TypeScript prototype of reusable AI product patterns for citations, confidence, uncertainty, feedback, evals, prompt history, response comparison, agent activity, and human review.",
+      "A React/TypeScript prototype exploring AI interface patterns for citations, confidence, uncertainty, feedback, evals, prompt history, response comparison, agent activity, and human review.",
     why:
-      "It shows product judgment around AI interfaces: evidence, uncertainty, and review states should be visible instead of hidden behind a magic text box.",
+      "It documents how I think about AI-assisted review: evidence, uncertainty, and review states should be visible instead of hidden behind a magic text box.",
     stack: ["React", "TypeScript", "Vite", "Vitest", "GitHub Pages"],
     image: "/images/projects/human-ai-design-system.png",
     alt: "Human-AI Design System homepage with AI review product patterns",
@@ -51,7 +51,7 @@ const PROJECTS = [
     summary:
       "An AI-assisted San Francisco food venue guessing app that ranks likely restaurants from uploaded photos while handling privacy, metadata stripping, provider behavior, and uncertainty.",
     why:
-      "It shows applied AI product work outside the clinical niche: image upload flows, ranking, privacy choices, model/provider failures, and a playful consumer-facing interface.",
+      "It is applied AI practice outside the clinical niche: image upload flows, ranking, privacy choices, model/provider failures, and a playful consumer-facing interface.",
     stack: ["React", "Vite", "Node", "AI vision workflows", "Privacy-aware uploads"],
     image: "/images/projects/sf-food-guesser.png",
     alt: "SF Food Guesser app interface for uploading food photos and guessing venues",
@@ -61,11 +61,11 @@ const PROJECTS = [
   },
 ];
 
-const ROLES = [
-  "Product Engineer",
-  "Software Engineer",
-  "AI / Applied AI Engineer",
-  "Solutions Engineer / Forward-Deployed Engineer",
+const FOCUS_AREAS = [
+  "Clinical research regulatory affairs",
+  "AI-assisted workflow prototypes",
+  "Evidence review and human oversight",
+  "Healthtech implementation / solutions",
 ];
 
 export default function SoftwareProjects() {
@@ -74,7 +74,7 @@ export default function SoftwareProjects() {
       <header className="grid md:grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-24">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            Software
+            Projects
           </p>
           <p className="mt-3 font-mono text-[0.7rem] tracking-[0.06em] text-ink-mute oldstyle">
             San Francisco · 2026
@@ -82,17 +82,17 @@ export default function SoftwareProjects() {
         </div>
         <div className="md:col-span-9">
           <h1 className="font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
-            I build software from the workflows I know too well.
+            I use GitHub to explore the workflows I know too well.
           </h1>
           <p className="mt-6 text-[1.08rem] md:text-[1.22rem] leading-relaxed text-ink-soft max-w-[60ch]">
-            I am transitioning from clinical research and regulatory affairs
-            into software, product, and applied AI engineering. My wedge is
-            practical: I know where clinical-trial operations break, and I am
-            building tools around follow-up, evidence, review, uncertainty, and
+            I am a clinical research regulatory affairs professional documenting
+            hands-on technical learning through prototypes. The practical wedge
+            is that I know where clinical-trial workflows break, and I am
+            exploring tools around follow-up, evidence, review, uncertainty, and
             human-in-the-loop workflows.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            {ROLES.map((role) => (
+            {FOCUS_AREAS.map((role) => (
               <span
                 key={role}
                 className="rounded-full border border-rule bg-paper-soft px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-ink-soft"
@@ -113,7 +113,7 @@ export default function SoftwareProjects() {
               Featured projects
             </h2>
             <p className="mt-6 font-display italic text-[1rem] text-ink-soft leading-snug max-w-[18ch]">
-              Working demos, not just claims.
+              Working prototypes, not just claims.
             </p>
           </div>
           <div className="md:col-span-9 space-y-12 md:border-l md:border-rule-soft md:pl-10">
@@ -187,13 +187,13 @@ export default function SoftwareProjects() {
         </div>
         <div className="md:col-span-9 md:border-l md:border-rule-soft md:pl-10">
           <p className="font-display text-[1.45rem] md:text-[2rem] leading-[1.16] tracking-[-0.018em] text-ink max-w-[30ch]">
-            I am looking for teams where domain fluency and fast shipping both
-            matter.
+            I am looking for teams where clinical/regulatory fluency and
+            practical implementation judgment both matter.
           </p>
           <p className="mt-5 text-ink-soft leading-relaxed max-w-[58ch]">
-            The best fit is product/software/applied AI work around messy human
-            workflows: clinical operations, regulated review, evidence-backed AI
-            surfaces, internal tools, or customer-facing implementation work.
+            The best fit is work around messy human workflows: clinical research,
+            regulated review, evidence-backed AI surfaces, internal tools,
+            customer-facing implementation, or healthtech solutions work.
           </p>
           <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[0.74rem] uppercase tracking-[0.12em]">
             <a
