@@ -25,7 +25,7 @@ const PROJECTS = [
     summary:
       "A read-only regulatory training follow-up prototype for clinical research teams, built around protocol/amendment training, overdue acknowledgments, coordinator follow-up, and audit-ready filing notes.",
     why:
-      "This is the clearest bridge between my clinical/regulatory background and my technical learning: it turns a workflow I know from the inside into a product surface a study team could review.",
+      "This is the clearest bridge between my clinical/regulatory background and the roles I’m pursuing: it turns a workflow I know from the inside into a product surface a study team could review.",
     stack: ["React", "Vite", "Node.js", "Cloudflare Workers", "Synthetic demo data"],
     image: "/images/projects/studychaser-dashboard.png",
     alt: "StudyChaser dashboard with synthetic training counts and overdue follow-up items",
@@ -85,11 +85,11 @@ export default function SoftwareProjects() {
             I use GitHub to explore the workflows I know too well.
           </h1>
           <p className="mt-6 text-[1.08rem] md:text-[1.22rem] leading-relaxed text-ink-soft max-w-[60ch]">
-            I am a clinical research regulatory affairs professional documenting
-            hands-on technical learning through prototypes. The practical wedge
-            is that I know where clinical-trial workflows break, and I am
-            exploring tools around follow-up, evidence, review, uncertainty, and
-            human-in-the-loop workflows.
+            I am a clinical research regulatory affairs professional looking for
+            roles in healthtech, clinical AI, regulatory workflow tooling,
+            implementation, or product-adjacent teams. I learn quickly,
+            prototype fast, and I know where clinical-trial workflows break:
+            follow-up, evidence, review, uncertainty, and human oversight.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {FOCUS_AREAS.map((role) => (

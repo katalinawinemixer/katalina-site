@@ -14,7 +14,7 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "Grounding my job search in clinical research regulatory affairs while using GitHub to document hands-on technical learning and prototypes around trial training, evidence review, and human-in-the-loop systems.",
+      "Looking for roles in healthtech, clinical AI, regulatory workflow tooling, implementation, or product-adjacent teams where clinical research regulatory affairs fluency matters. I learn quickly and use GitHub to prototype around trial training, evidence review, and human-in-the-loop systems.",
   },
   {
     lead: "Writing desk",
