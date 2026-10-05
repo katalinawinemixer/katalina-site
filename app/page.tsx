@@ -41,7 +41,7 @@ export default function Home() {
             early-phase biotech breaks, why Latin America is becoming serious
             trial infrastructure, and what investors should ask before the
             polished memo hides the operational risk. Based in San&nbsp;Francisco,
-            with experience in oncology regulatory affairs at UW&nbsp;Seattle.
+            with a background in clinical research and regulatory affairs.
           </p>
           <div className="md:col-span-3 md:col-start-10 flex md:justify-end">
             <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-mute leading-relaxed">
