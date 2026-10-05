@@ -14,7 +14,7 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "My background includes clinical research regulatory affairs at UW. I’m looking for roles in healthtech, clinical AI, regulatory workflow tooling, implementation, or product-adjacent teams where clinical research regulatory affairs fluency matters. I learn quickly and use GitHub to prototype around trial training, evidence review, and human-in-the-loop systems.",
+      "I’m looking for roles in healthtech, with a focus on wearable and medical device research. I want to bring my experience in clinical research, laboratory workflows, and regulatory operations to study teams developing and evaluating these technologies. Alongside that search, I’m learning to code and building practical projects around study workflows and evidence review.",
   },
   {
     lead: "Writing desk",
