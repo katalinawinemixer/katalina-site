@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify ${{ matrix.package-manager }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package-manager: [npm, bun]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - uses: oven-sh/setup-bun@v2
+        if: matrix.package-manager == 'bun'
+        with:
+          bun-version: 1.3.13
+      - name: Install npm lockfile
+        if: matrix.package-manager == 'npm'
+        run: npm ci
+      - name: Install Bun lockfile
+        if: matrix.package-manager == 'bun'
+        run: bun install --frozen-lockfile
+      - run: ${{ matrix.package-manager }} run lint
+      - run: ${{ matrix.package-manager }} run build
