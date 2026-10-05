@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Now",
-  description: "What I'm working on, reading, and thinking about this month.",
+  description: "My current focus on healthtech and wearable research roles, study-workflow projects, and technical learning.",
   alternates: {
     canonical: absoluteUrl("/now"),
   },
@@ -19,35 +19,35 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Writing desk",
     body:
-      "Sharpening project case studies and GitHub-facing writing around StudyChaser, the Human-AI Design System, SF Food Guesser, and the clinical-trial software stack.",
+      "Writing about research workflows, wearable devices, and access to studies, drawing on my clinical research experience and school papers. I’m also documenting StudyChaser and the Human-AI Design System, with a focus on training follow-up and evidence review.",
   },
   {
     lead: "Reading stack",
     body:
-      "Cracking the Coding Interview for implementation practice, followed by Designing Data-Intensive Applications and Building Secure and Reliable Systems for stronger systems thinking.",
+      "Cracking the Coding Interview for coding practice. Next on my list are Designing Data-Intensive Applications and Building Secure and Reliable Systems. I’m building the technical knowledge to better understand the software and data workflows that research teams depend on.",
   },
   {
     lead: "Following",
     body:
-      "Clinical workflow automation, applied AI interfaces, implementation teams, and healthtech groups where domain fluency and practical tooling judgment both matter.",
+      "How wearable devices are evaluated in studies, how participant data is collected and checked, and how research teams can reach underserved communities. I’m interested in the practical work that makes a study run well and its findings useful.",
   },
   {
     lead: "Open to",
     body:
-      "Healthtech, clinical AI, regulatory/compliance automation, implementation, solutions, and product-adjacent conversations where regulated-workflow fluency matters.",
+      "Clinical study operations, research coordination, and regulatory operations roles with healthtech, wearable, and medical device teams. I’m also open to implementation work that draws on my experience with clinical systems and study workflows.",
   },
   {
     lead: "In SF",
     body:
-      "Based in San Francisco. If you work around biotech, clinical operations, or LatAm investing and something here resonates, I would be glad to meet for coffee.",
+      "Based in San Francisco. I’d be glad to meet people working on wearable research, medical device studies, or healthtech tools for research teams. I’m especially interested in how studies can become more accessible to local communities.",
   },
 ];
 
 const CURRENTLY = [
   ["Base", "San Francisco"],
   ["Book", "Cracking the Coding Interview"],
-  ["Following", "DDIA → secure systems"],
-  ["Question", "How do clinical workflows become trustworthy AI-assisted tools?"],
+  ["Focus", "Healthtech and wearable research"],
+  ["Question", "How can studies collect useful data and reach underserved communities?"],
 ];
 
 export default function Now() {
