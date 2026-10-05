@@ -14,7 +14,7 @@ const STANZAS: { lead: string; body: string }[] = [
   {
     lead: "Main focus",
     body:
-      "Looking for roles in healthtech, clinical AI, regulatory workflow tooling, implementation, or product-adjacent teams where clinical research regulatory affairs fluency matters. I learn quickly and use GitHub to prototype around trial training, evidence review, and human-in-the-loop systems.",
+      "My background includes clinical research regulatory affairs at UW. I’m looking for roles in healthtech, clinical AI, regulatory workflow tooling, implementation, or product-adjacent teams where clinical research regulatory affairs fluency matters. I learn quickly and use GitHub to prototype around trial training, evidence review, and human-in-the-loop systems.",
   },
   {
     lead: "Writing desk",
@@ -60,7 +60,7 @@ export default function Now() {
             Now
           </p>
           <p className="mt-3 font-mono text-[0.72rem] tracking-[0.04em] text-ink-mute oldstyle normal-case">
-            Updated April 2026 · San Francisco
+            Updated October 2026 · San Francisco
           </p>
         </div>
         <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.4rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">

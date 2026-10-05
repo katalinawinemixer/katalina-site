@@ -5,6 +5,8 @@ import { essays, getEssay, formatDate, getTagLabel } from "@/lib/essays";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const ESSAY_LOADERS: Record<string, () => Promise<{ default: React.ComponentType }>> = {
+  "finishing-my-degree-while-working-in-clinical-research": () =>
+    import("@/content/essays/finishing-my-degree-while-working-in-clinical-research.mdx"),
   "what-biotech-investors-miss": () =>
     import("@/content/essays/what-biotech-investors-miss.mdx"),
   "diligencing-phase-one-two-biotech": () =>

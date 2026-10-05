@@ -11,7 +11,7 @@ export default function SiteFooter() {
             San Francisco, CA
           </p>
           <p className="mt-1 normal-case tracking-[0.04em] text-ink-mute">
-            Remote with the heme-onc program at UW Seattle
+            Clinical research · Regulatory affairs
           </p>
         </div>
         <div className="md:col-span-3">
