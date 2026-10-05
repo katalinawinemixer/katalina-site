@@ -40,8 +40,8 @@ export default function Home() {
             from inside clinical-trial operations. I write about where
             early-phase biotech breaks, why Latin America is becoming serious
             trial infrastructure, and what investors should ask before the
-            polished memo hides the operational risk. Based in San&nbsp;Francisco;
-            remote with a heme-onc program at UW&nbsp;Seattle.
+            polished memo hides the operational risk. Based in San&nbsp;Francisco,
+            with experience in oncology regulatory affairs at UW&nbsp;Seattle.
           </p>
           <div className="md:col-span-3 md:col-start-10 flex md:justify-end">
             <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-mute leading-relaxed">

@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Katalina Londoño — regulatory affairs coordinator at the University of Washington's heme-onc program, writing about clinical-trial operations and Latin American biotech.",
+    "Katalina Londoño — clinical research professional with experience in regulatory affairs at the University of Washington, writing about clinical-trial operations and Latin American biotech.",
   alternates: {
     canonical: absoluteUrl("/about"),
   },
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 const PATH: { year: string; title: string; body: string }[] =
   [
     {
-      year: "2024 →",
+      year: "2024–2026",
       title: "The document floor",
       body:
-        "Now I run the regulatory document layer for a heme-onc trial portfolio at UW. It is the part of clinical research where amendments, deviations, audits, training records, and FDA inspection questions all meet in one very unforgiving place.",
+        "At UW, I managed regulatory and operational workflows for a heme-onc trial portfolio. It is the part of clinical research where amendments, deviations, audits, training records, and FDA inspection questions all meet in one very unforgiving place.",
     },
     {
       year: "2023–24",
@@ -42,7 +42,7 @@ export default function About() {
             About
           </p>
           <p className="mt-3 font-mono text-[0.7rem] tracking-[0.06em] text-ink-mute oldstyle">
-            San Francisco · Updated April 2026
+            San Francisco · Updated October 2026
           </p>
           <a
             href="/Katalina-Londono-Resume.pdf"
@@ -52,8 +52,8 @@ export default function About() {
           </a>
         </div>
         <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
-          A coordinator’s view of clinical trials, from the regulatory floor of
-          an academic cancer center.
+          A clinical research background, from the lab to trial coordination
+          and regulatory affairs.
         </h1>
       </header>
 
@@ -66,25 +66,21 @@ export default function About() {
         </div>
         <div className="md:col-span-9 prose-essay max-w-none">
           <p>
-            I am a regulatory affairs coordinator at the University of
-            Washington&rsquo;s heme-onc program, which means I run the document
-            floor of eighteen to twenty-one Phase&nbsp;I–III oncology trials at
-            any given time &mdash; IRB submissions, amendments, deviations,
-            audits, the sealed envelopes of an FDA inspection. The work is
-            unglamorous in proportion to its consequence. A protocol amendment
-            that should take six business days takes thirty-one because two
-            reviewers were on PTO and a third had questions about a sentence in
-            section&nbsp;8.4. A treatment delay for a patient with relapsed AML
-            usually traces back to an email that should have been sent on a
-            Wednesday.
+            I worked as a regulatory affairs coordinator in the University of
+            Washington&rsquo;s heme-onc program from July&nbsp;2024 to
+            August&nbsp;2026. I managed regulatory and operational workflows
+            for eighteen to twenty-one concurrent Phase&nbsp;I–III oncology
+            trials, including IRB submissions, protocol and consent amendments,
+            safety reporting, and study documentation. I also supported
+            monitoring visits, sponsor audits, and an FDA inspection.
           </p>
           <p>
-            Before this I coordinated early-phase trials at PPD in Orlando
+            Before UW, I coordinated early-phase trials at PPD in Orlando
             &mdash; neurology, RSV, asthma, COVID, chikungunya &mdash; and
             before that I built a QC system in a lab where pharmacokinetic
             samples were being mishandled enough that we cut deviations by
-            twenty-five percent and shipment errors in half. I am one course
-            from a B.S. in Applied Health Sciences. I am in San&nbsp;Francisco.
+            twenty-five percent and shipment errors in half. I earned a B.S. in
+            Applied Health Sciences in August&nbsp;2026. I am in San&nbsp;Francisco.
             My family is Colombian. I think Latin&nbsp;America is the next
             clinical-trial frontier and most of the people writing about
             biotech can&rsquo;t see it yet.
@@ -144,11 +140,42 @@ export default function About() {
 
       <hr className="rule" />
 
+      {/* ── Education ─────────────────────────────────── */}
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
+        <div className="md:col-span-3">
+          <h2 className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
+            §&nbsp;03 — Education
+          </h2>
+        </div>
+        <div className="md:col-span-9 grid sm:grid-cols-2 gap-8">
+          <div className="border-t border-rule-soft pt-5">
+            <h3 className="font-display text-[1.25rem] leading-tight text-ink">
+              B.S. in Applied Health Sciences
+            </h3>
+            <p className="mt-3 text-ink-soft">Eastern Florida State College</p>
+            <p className="mt-2 font-mono text-[0.74rem] tracking-[0.04em] text-ink-mute oldstyle">
+              August 2026
+            </p>
+          </div>
+          <div className="border-t border-rule-soft pt-5">
+            <h3 className="font-display text-[1.25rem] leading-tight text-ink">
+              Associate of Arts
+            </h3>
+            <p className="mt-3 text-ink-soft">Valencia College</p>
+            <p className="mt-2 font-mono text-[0.74rem] tracking-[0.04em] text-ink-mute oldstyle">
+              December 2016
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
       {/* ── Therapeutic areas + systems ───────────────── */}
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            §&nbsp;03 — Working surface
+            §&nbsp;04 — Working surface
           </p>
         </div>
         <div className="md:col-span-9 grid sm:grid-cols-2 gap-10">
@@ -227,7 +254,7 @@ export default function About() {
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-24">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            §&nbsp;04 — Colophon
+            §&nbsp;05 — Colophon
           </p>
         </div>
         <div className="md:col-span-9 grid sm:grid-cols-3 gap-8">
@@ -267,7 +294,7 @@ export default function About() {
       <section className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 md:py-20">
         <div className="md:col-span-3">
           <p className="font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink-soft">
-            §&nbsp;05 — In touch
+            §&nbsp;06 — In touch
           </p>
         </div>
         <div className="md:col-span-9 prose-essay max-w-none">

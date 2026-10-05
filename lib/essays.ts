@@ -38,6 +38,15 @@ export type EssayMeta = {
 
 export const essays: EssayMeta[] = [
   {
+    slug: "finishing-my-degree-while-working-in-clinical-research",
+    title: "Finishing my degree while working in clinical research",
+    dek:
+      "A short reflection on completing my bachelor's in Applied Health Sciences while working full time in clinical research.",
+    date: "2026-10-04",
+    readingTime: "2 min",
+    tags: ["trialops"],
+  },
+  {
     slug: "what-biotech-investors-miss",
     title: "What biotech investors miss about clinical-trial operations",
     dek:
