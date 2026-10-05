@@ -18,6 +18,14 @@ export default function SiteFooter() {
           <p className="text-ink-mute">Contact</p>
           <p className="mt-2 normal-case tracking-[0.04em]">
             <a
+              href="/Katalina-Londono-Resume.pdf"
+              className="hover:text-terracotta transition-colors"
+            >
+              Resume (PDF)
+            </a>
+          </p>
+          <p className="mt-2 normal-case tracking-[0.04em]">
+            <a
               href="mailto:Katalina@katalinalondono.com"
               className="hover:text-terracotta transition-colors"
             >

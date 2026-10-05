@@ -227,6 +227,19 @@ export default function Home() {
           <ul className="md:col-span-9 space-y-4">
             <li>
               <a
+                href="/Katalina-Londono-Resume.pdf"
+                className="group inline-flex items-baseline gap-4 font-display text-[1.4rem] md:text-[1.6rem] text-ink hover:text-terracotta transition-colors"
+              >
+                <span className="underline-offset-[6px] group-hover:underline decoration-1 decoration-terracotta/60">
+                  Resume
+                </span>
+                <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink-mute">
+                  → PDF
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="mailto:Katalina@katalinalondono.com"
                 className="group inline-flex items-baseline gap-4 font-display text-[1.4rem] md:text-[1.6rem] text-ink hover:text-terracotta transition-colors"
               >

@@ -44,6 +44,12 @@ export default function About() {
           <p className="mt-3 font-mono text-[0.7rem] tracking-[0.06em] text-ink-mute oldstyle">
             San Francisco · Updated April 2026
           </p>
+          <a
+            href="/Katalina-Londono-Resume.pdf"
+            className="mt-5 inline-flex font-mono text-[0.74rem] uppercase tracking-[0.12em] text-terracotta hover:text-ink transition-colors"
+          >
+            Resume (PDF) →
+          </a>
         </div>
         <h1 className="md:col-span-9 font-display text-[2.05rem] md:text-[3.6rem] leading-[1.08] md:leading-[1.04] tracking-[-0.02em] md:tracking-[-0.025em] text-ink">
           A coordinator’s view of clinical trials, from the regulatory floor of
