@@ -25,6 +25,13 @@ jobs:
         if: matrix.package-manager == 'bun'
         with:
           bun-version: 1.3.13
+      - name: Check lockfile consistency
+        if: matrix.package-manager == 'bun'
+        run: |
+          task_lock_dir="$(mktemp -d)"
+          cp package.json package-lock.json "$task_lock_dir/"
+          (cd "$task_lock_dir" && bun install --lockfile-only --ignore-scripts)
+          diff -u bun.lock "$task_lock_dir/bun.lock"
       - name: Install npm lockfile
         if: matrix.package-manager == 'npm'
         run: npm ci
